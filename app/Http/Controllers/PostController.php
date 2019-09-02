@@ -74,23 +74,7 @@ class PostController extends Controller
             ]);
         }
 
-        public function infos(){
 
-            $categories = Category::all();
-            $posts = Post::where([
-                ['active','=', true],
-                ['draft','=', false]
-
-            ])
-            ->orderBy('created_at','DESC')
-            ->paginate(9);
-
-
-            return view('articles',[
-                'posts' => $posts,
-                'categories' => $categories,
-            ]);
-        }
     /**
      * Show the application dashboard.
      *
@@ -113,5 +97,10 @@ class PostController extends Controller
 
 
             ]);
+    }
+
+    public function infos() {
+        return view('infos');
+
     }
 }

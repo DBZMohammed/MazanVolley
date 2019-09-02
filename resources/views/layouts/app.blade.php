@@ -23,7 +23,7 @@
 
     <header class="container-fluid p-1">
         <div class="row col-12 justify-content-between">
-                <a class="justify-content-xl-start" href="{{ url('/') }}"><img width=150 height=150 src="{{ asset('img/logo/Volleyball_NB2.png') }}" alt="background image"></a>
+                <a class="justify-content-xl-start p-2" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo2.png') }}" alt="background image"></a>
 
                     <a class="navbar navbar-brand ml-5 align-content-center" href="{{ url('/') }}">
                         <h1 class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>

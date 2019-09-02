@@ -18,7 +18,7 @@ class PushToGithub extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Envoie le projet sur GitHub';
 
     /**
      * Create a new command instance.

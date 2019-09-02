@@ -13,7 +13,6 @@ Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')
 
     Route::resource('posts', 'PostController');
     Route::resource('pages', 'PageController');
-    Route::resource('infos', 'PageController');
 
 
 });
@@ -23,13 +22,13 @@ Route::resource('comments', 'CommentController');
 Route::get('/', function (){
     // echo('A propos');
     return view('a-propos');
-});
+})->name('accueil');
 
 Route::get('article/{id}', 'PostController@article')->name('article');
 
 Route::get('articles', 'PostController@articles')->name('articles');
 
-Route::get('infos', 'PostController@articles')->name('infos');
+Route::get('infos', 'PostController@infos')->name('infos');
     // ->middleware('checkAdmin')
 
 
