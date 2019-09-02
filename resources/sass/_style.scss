@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700,900);
+
+
+// * {
+//     background-color: rgba(0, 0, 0, 0.2);
+// }
+
+  header{
+    background-color:  rgb(20, 116, 180);
+  }
+
+  .footer{
+    //   position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color:   rgb(9, 72, 114);
+
+  }
+
+  main{
+        background: url('img/Background/Volleyball_ball3.jpg') no-repeat center fixed;
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover; /* version standardisée */
+    //   max-width: 1280px;
+      min-height: 100%;
+      margin:0 auto;
+      position: relative;
+
+  }
+
+  h1.font-weight-bold{
+    min-width: 280px;
+    font-size: 7rem !important;
+    animation-name: jackInTheBox;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 11px 0 17px 0;
+    color: #ffffff !important;
+    text-shadow: 0 13.36px 8.896px #000000,0 -2px 25px rgb(241, 0, 0);
+  /* #c4b59d */
+  letter-spacing: -4px;
+  }
+  @keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+
+    50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+
+    70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .jackInTheBox {
+    -webkit-animation-name: jackInTheBox;
+    animation-name: jackInTheBox;
+  }
+
+  body {
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #f8fafc;
+    height: 100%;
+
+}
+
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+  }
+
+.fas,
+.fa-user-lock{
+    background-color: #405D9D;
+    color: #fff;
+}
