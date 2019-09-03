@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container d-flex justify-content-center">
+  <h2> - Voici notre belle équipe - </h2>
+
+</div>
+
 <div class="card-group p-2">
         <div class="card p-2">
             <a href="{{ asset('img/equipe/IMG_20190902_205738.jpg') }}"><img width=610 height=300 class="img-rounded" src="{{ asset('img/equipe/IMG_20190902_205738.jpg') }}" alt="Card image cap"></a>

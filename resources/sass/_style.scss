@@ -66,6 +66,8 @@
     display: block;
   }
 
+  // animations
+
   h1.font-weight-bold{
     // min-width: 280px;
     min-height: 280px;
@@ -83,6 +85,7 @@
   /* #c4b59d */
   letter-spacing: -4px;
   }
+
   @keyframes jackInTheBox {
     from {
       opacity: 0;
@@ -114,20 +117,69 @@
     animation-name: jackInTheBox;
   }
 
-//   body {
-//     margin: 0;
-//     font-family: Nunito, sans-serif;
-//     font-weight: 400;
-//     line-height: 1.6;
-//     color: #212529;
-//     text-align: left;
-//     background-color: #f8fafc;
-//     height: 100%;
+  h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    animation-name:lightSpeedIn;
+    animation-duration: 3s;
+  }
 
-// }
-
+  @-webkit-keyframes lightSpeedIn {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+      transform: translate3d(100%, 0, 0) skewX(-30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      -webkit-transform: skewX(20deg);
+      transform: skewX(20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: skewX(-5deg);
+      transform: skewX(-5deg);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes lightSpeedIn {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+      transform: translate3d(100%, 0, 0) skewX(-30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      -webkit-transform: skewX(20deg);
+      transform: skewX(20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: skewX(-5deg);
+      transform: skewX(-5deg);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .lightSpeedIn {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  
 .btn-facebook {
     background-color: #405D9D;
     color: #fff;
   }
-
