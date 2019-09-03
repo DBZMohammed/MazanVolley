@@ -78,8 +78,8 @@
 
                                                 <a id="navbarDropdown" class="nav-link font-weight-bold btn btn-light text-dark"
                                                     href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false" v-pre>
-                                                    Bonjour, {{ Auth::user()->prenom }} <span class="caret"></span>
+                                                    aria-expanded="false" v-pre><i class="fas fa-user-check"></i>
+                                                    Bonjour,    {{ Auth::user()->prenom }} <span class="caret"></span>
                                                 </a>
 
                                                 <div class="dropdown-menu dropdown-menu-right font-weight-bold text-dark"

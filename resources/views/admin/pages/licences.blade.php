@@ -6,15 +6,19 @@
         <form class="">
             <div class="form-group">
                 <label for="exampleInputNom">Nom :</label>
-                <input type="text" class="form-control" aria-describedby="aide email" placeholder="Nom">
+                <input type="text" class="form-control" aria-describedby="aide email" placeholder="Nom" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPrenom">Prénom :</label>
-                <input type="text" class="form-control" placeholder="Prénom">
+                <input type="text" class="form-control" placeholder="Prénom" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputDate">Date de naissance :</label>
-                <input type="text" class="form-control" placeholder="03/09/2019">
+                <input type="text" class="form-control" placeholder="03/09/2019" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPhone">Numéro de téléphone :</label>
+                <input type="text" class="form-control" placeholder="06.01.02.03.04" required>
             </div>
             <br>
             <div class="custom-file">
