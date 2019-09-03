@@ -53712,11 +53712,11 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./uploads */ "./resources/js/uploads.js");
-
 __webpack_require__(/*! @fortawesome/fontawesome-free/js/all.js */ "./node_modules/@fortawesome/fontawesome-free/js/all.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+__webpack_require__(/*! ./search */ "./resources/js/search.js");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -53726,6 +53726,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  */
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 /**
@@ -53867,30 +53868,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/uploads.js":
-/*!*********************************!*\
-  !*** ./resources/js/uploads.js ***!
-  \*********************************/
+/***/ "./resources/js/search.js":
+/*!********************************!*\
+  !*** ./resources/js/search.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-jQuery(document).ready(function ($) {
-  $('#myCarousel').carousel({
-    interval: 5000
-  });
-  $('#carousel-text').html($('#slide-content-0').html()); //Handles the carousel thumbnails
-
-  $('[id^=carousel-selector-]').click(function () {
-    var id = this.id.substr(this.id.lastIndexOf("-") + 1);
-    var id = parseInt(id);
-    $('#myCarousel').carousel(id);
-  }); // When the carousel slides, auto update the text
-
-  $('#myCarousel').on('slid.bs.carousel', function (e) {
-    var id = $('.item.active').data('slide-number');
-    $('#carousel-text').html($('#slide-content-' + id).html());
-  });
-});
+function search() {
+  console.log("n'a rien trouvé !!");
+  return;
+}
 
 /***/ }),
 

@@ -5,10 +5,11 @@
  */
 
 require('./bootstrap');
-require('./uploads');
 require('@fortawesome/fontawesome-free/js/all.js');
 
 window.Vue = require('vue');
+
+require('./search')
 
 /**
  * The following block of code may be used to automatically register your
