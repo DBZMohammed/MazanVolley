@@ -1,8 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700,900);
 
-* {
-    background-color: rgba(0, 0, 0, 0.2);
+// * {
+//     background-color: rgba(0, 0, 0, 0.2);
+// }
+@media all and (max-device-width: 480px)
+{
+  /* Vos règles CSS pour les mobiles ici */
+  #title1{
+    width: 300px;
+    height: 300px;
+    flex-grow: 1;
+  }
+
 }
+@media all and (max-device-width: 860px)
+{
+  /* Vos règles CSS pour les mobiles ici */
+  #title1{
+    font-size: 36px;
+    width: auto;
+    height: auto;
+    flex-grow: 1;
+  }
+}
+
+
+
+
 
   header{
     background-color:  rgb(20, 116, 180);
@@ -30,17 +54,26 @@
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
   }
-
   .card-body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 
   }
 
+  #nav-menu-cadenas{
+      margin-right: 0.5rem ;
+  }
+
+  .img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   h1.font-weight-bold{
     // min-width: 280px;
     min-height: 280px;
-    font-size: 7rem !important;
+    font-size: 7rem;
     animation-name: jackInTheBox;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -85,25 +118,23 @@
     animation-name: jackInTheBox;
   }
 
-  body {
-    margin: 0;
-    font-family: Nunito, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #212529;
-    text-align: left;
-    background-color: #f8fafc;
-    height: 100%;
+//   body {
+//     margin: 0;
+//     font-family: Nunito, sans-serif;
+//     font-weight: 400;
+//     line-height: 1.6;
+//     color: #212529;
+//     text-align: left;
+//     background-color: #f8fafc;
+//     height: 100%;
 
-}
+// }
 
 .btn-facebook {
     background-color: #405D9D;
     color: #fff;
   }
 
-.fas,
-.fa-user-lock{
-    background-color: #405D9D;
-    color: #fff;
-}
+
+
+

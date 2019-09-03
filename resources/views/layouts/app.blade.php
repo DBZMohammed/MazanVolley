@@ -9,16 +9,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Chilanka|Livvic|Poppins:400i,500i|Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <title class="">{{ config('app.name', 'Laravel') }}</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title class=".img-responsive">{{ config('app.name', 'Laravel') }}</title>
 </head>
 
 <body>
@@ -28,34 +24,25 @@
                 <a class="justify-content-xl-start p-2" href="{{ route('accueil') }}"><img width=200 height=200 src="{{ asset('img/logo/logo2.png') }}" alt="background image"></a>
 
                     <a class="navbar navbar-brand ml-5 align-content-center" href="{{ url('/') }}">
-                        <h1 class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
+                        <h1 id="title1" class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
                     </a>
         </div>
 
                 <div id="app p-5">
                     <div class="container-fluid">
-                        <div class="row d-flex flex-row-reverse">
-                            <nav class="navbar navbar-expand-md navbar-dark w-100">
+                        <div class="row d-flex justify-content-center">
+
+                            <nav class="navbar navbar-expand-lg navbar-light">
                                 <a class="navbar-brand text-hide" href="{{ url('/') }}">
                                     {{ config('app.name', 'Laravel') }}
                                 </a>
-                                <div class="container font-weight-bold">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
 
-                                    <div class="align-content-between" id="navbarSupportedContent">
-                                        <!-- Left Side Of Navbar -->
-                                        <ul class="navbar-nav mr-auto">
-
-                                        </ul>
-
-                                        <!-- Right Side Of Navbar -->
-                                        <ul class="navbar-nav ml-auto">
-                                            <!-- Authentication Links -->
-                                            <li class="nav-item m-4">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse align-content-between" id="navbarSupportedContent">
+                                  <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
                                                     href="{{ route('articles') }}">{{ __('La vie du club') }}</a>
                                             </li>
@@ -71,8 +58,14 @@
                                             @guest
                                             <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
-                                                    href="{{ route('login') }}"><i class="fas fa-user-lock"></i>{{ __('Administrateur') }}</a>
+                                                    href="{{ route('login') }}"><i id="nav-menu-cadenas" class="fas fa-user-lock"></i>{{ __('Administrateur') }}</a>
                                             </li>
+
+                                            <form class="form-inline m-4">
+                                                    <input class="form-control font-weight-bold btn btn-light text-dark m-auto" type="search" placeholder="Rechercher" aria-label="Rechercher">
+                                                    <button class="btn btn-outline-success font-weight-bold text-dark m-auto" type="submit">Rechercher</button>
+                                                  </form>
+
                                             @if (Route::has('register'))
                                                 {{-- <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
@@ -94,7 +87,11 @@
 
                                                     <a class="dropdown-item" href="{{ route('posts.index') }}"> Articles </a>
 
-                                                    <a class="dropdown-item" href="{{ route('pages.index') }}"> Licences </a>
+                                                    <a class="dropdown-item" href="{{ route('pages.index') }}"> pages </a>
+
+                                                    <a class="dropdown-item" href="{{ route('licences') }}"> licence </a>
+
+                                                    <a class="dropdown-item" href="{{ route('uploads') }}"> uploads </a>
 
 
 
@@ -107,16 +104,14 @@
                                                         style="display: none;">
                                                         @csrf
                                                     </form>
+
                                                 </div>
                                             </li>
                                             @endguest
                                         </ul>
-                                    </div>
                                 </div>
-                            </nav>
+                              </nav>
 
-                        </div>
-                    </div>
 
 
     </header>
@@ -141,16 +136,13 @@
                             <a href="https://fr-fr.facebook.com/pages/category/Sports-Club/Mazan-Volley-ball-1883689478318448/" class="btn btn-facebook"><i class="fab fa-facebook-f"></i>acebook</a>
 
                         </div>
-
-                        <span><i class="fas fa-user-lock"></i></span>
             </section>
         </div>
     </footer>
     <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>

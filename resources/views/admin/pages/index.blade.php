@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12 text-center">
             <a class="btn btn-info p-2 mb-4" href="{{ route('pages.create') }}">Créer une nouvelle entrée</a>
-            <table class="table table-hover table-bordered text-center bg-white"> 
+            <table class="table table-hover table-bordered text-center bg-white">
 
                 <hr>
                     {{ $pages->links() }}
@@ -19,6 +19,7 @@
                 <thead class="thead-dark">
                     <tr class="text-center">
                         <th>TITRE</th>
+                        <th>PHOTOS</th>
                         <th>DATE DE CREATION</th>
                         <th>DATE DE MODIFICATION</th>
                         <th>ACTIONS</th>
@@ -27,6 +28,7 @@
                 @foreach($pages as $page)
                 <tr>
                     <td class="align-middle">{{ $page->title }}</td>
+                    <td class="align-middle">{{ $page->photo }}</td>
                     <td class="align-middle">{{ $page->created_at->format('d/m/Y H:i:s') }}</td>
                     <td class="align-middle">{{ $page->updated_at->format('d/m/Y H:i:s') }}</td>
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);@import url(https://fonts.googleapis.com/css?family=Lato:700,900);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap);@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);@import url(https://fonts.googleapis.com/css?family=Chilanka|Livvic|Poppins:400i,500i|Raleway&display=swap);@import url(https://fonts.googleapis.com/css?family=Lato:700,900);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
@@ -8241,8 +8241,25 @@ button.close {
   }
 }
 
-* {
-  background-color: rgba(0, 0, 0, 0.2);
+@media all and (max-device-width: 480px) {
+  /* Vos règles CSS pour les mobiles ici */
+
+  #title1 {
+    width: 300px;
+    height: 300px;
+    flex-grow: 1;
+  }
+}
+
+@media all and (max-device-width: 860px) {
+  /* Vos règles CSS pour les mobiles ici */
+
+  #title1 {
+    font-size: 36px;
+    width: auto;
+    height: auto;
+    flex-grow: 1;
+  }
 }
 
 header {
@@ -8275,9 +8292,19 @@ a {
   font-size: 16px;
 }
 
+#nav-menu-cadenas {
+  margin-right: 0.5rem;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1.font-weight-bold {
   min-height: 280px;
-  font-size: 7rem !important;
+  font-size: 7rem;
   -webkit-animation-name: jackInTheBox;
           animation-name: jackInTheBox;
   -webkit-animation-duration: 3s;
@@ -8343,24 +8370,7 @@ h1.font-weight-bold {
   animation-name: jackInTheBox;
 }
 
-body {
-  margin: 0;
-  font-family: Nunito, sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #212529;
-  text-align: left;
-  background-color: #f8fafc;
-  height: 100%;
-}
-
 .btn-facebook {
-  background-color: #405D9D;
-  color: #fff;
-}
-
-.fas,
-.fa-user-lock {
   background-color: #405D9D;
   color: #fff;
 }

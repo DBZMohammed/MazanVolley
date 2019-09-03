@@ -10,7 +10,8 @@ Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')
     // Route::put('posts/{id}/update', 'PostController@update')->name('posts.update');
     // Route::get('posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
-
+    Route::get('/licences', 'PostController@licences')->name('licences');
+    Route::get('/uploads', 'PostController@uploads')->name('uploads');
     Route::resource('posts', 'PostController');
     Route::resource('pages', 'PageController');
 
@@ -31,6 +32,8 @@ Route::get('articles', 'PostController@articles')->name('articles');
 Route::get('infos', 'PostController@infos')->name('infos');
 
 Route::get('uploads', 'PostController@uploads')->name('uploads');
+
+
     // ->middleware('checkAdmin')
 
 
@@ -41,3 +44,6 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+?>

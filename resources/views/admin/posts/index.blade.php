@@ -20,6 +20,7 @@
                     <tr class="text-center">
                         <th>TITRE</th>
                         <th>CATEGORIE</th>
+                        <th>PHOTOS</th>
                         <th>DATE DE CREATION</th>
                         <th>DATE DE MODIFICATION</th>
                         <th>ACTIONS</th>
@@ -28,6 +29,7 @@
                 @foreach($posts as $post)
                 <tr>
                     <td class="align-middle">{{ $post->title }}</td>
+                    {{-- <td class="align-middle">{{ $page->photo }}</td> --}}
                     <td class="align-middle">
 
                         @if($post->category)

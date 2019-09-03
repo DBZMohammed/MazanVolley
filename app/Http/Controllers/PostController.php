@@ -67,7 +67,7 @@ class PostController extends Controller
             ->orderBy('created_at','DESC')
             ->paginate(9);
 
-
+            $posts = Post::paginate(10);
             return view('articles',[
                 'posts' => $posts,
                 'categories' => $categories,
@@ -103,7 +103,6 @@ class PostController extends Controller
         return view('infos');
 
     }
-
 
     public function uploads() {
         return view('uploads');
