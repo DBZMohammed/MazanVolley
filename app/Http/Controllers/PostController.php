@@ -103,4 +103,10 @@ class PostController extends Controller
         return view('infos');
 
     }
+
+
+    public function uploads() {
+        return view('uploads');
+
+    }
 }

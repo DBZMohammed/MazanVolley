@@ -29,6 +29,8 @@ Route::get('article/{id}', 'PostController@article')->name('article');
 Route::get('articles', 'PostController@articles')->name('articles');
 
 Route::get('infos', 'PostController@infos')->name('infos');
+
+Route::get('uploads', 'PostController@uploads')->name('uploads');
     // ->middleware('checkAdmin')
 
 
