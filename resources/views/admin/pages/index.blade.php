@@ -9,8 +9,8 @@
     @endif
     <div class="row justify-content-center">
         <div class="col-md-12 text-center">
-            <a class="btn btn-info p-2 mb-4" href="{{ route('pages.create') }}">Créer une nouvelle page</a>
-            <table class="table table-hover table-bordered text-center">
+            <a class="btn btn-info p-2 mb-4" href="{{ route('pages.create') }}">Créer une nouvelle entrée</a>
+            <table class="table table-hover table-bordered text-center bg-white"> 
 
                 <hr>
                     {{ $pages->links() }}

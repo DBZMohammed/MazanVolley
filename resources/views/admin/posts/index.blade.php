@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12 text-center">
             <a class="btn btn-info p-2 mb-4" href="{{ route('posts.create') }}">Créer un article</a>
-            <table class="table table-hover table-bordered text-center">
+            <table class="table table-hover table-bordered text-center bg-white">
 
                 <hr>
                     {{ $posts->links() }}
@@ -29,7 +29,7 @@
                 <tr>
                     <td class="align-middle">{{ $post->title }}</td>
                     <td class="align-middle">
-                        
+
                         @if($post->category)
                             {{ $post->category->title }}
                         @endif

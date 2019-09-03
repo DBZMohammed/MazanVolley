@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card text-center bg-info text-white">
-                <div class="card-header  font-weight-bold">CREATION D'UNE PAGE</div>
+                <div class="card-header  font-weight-bold text-dark">Ajouter un licencié</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -25,29 +25,29 @@
                             </div>
                         @endif
                             @csrf
-                            <div class="col-mb-12 mb-3 font-weight-bold">
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
-                                    <label for="title">Nom de la page : </label>
+                                    <label for="title">Nom du licencié : </label>
                                 </div>
                                 <div class="font-size-500">
                                         <input value="{{ old('title') }}" type="text" name="title">
                                 </div>
                             </div>
 
-                            <div class="col-mb-12 mb-3 font-weight-bold">
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
-                                    <label for="slug">Slug de la page : </label>
+                                    <label for="slug">Slug du licencié : </label>
                                 </div>
                                 <div class="font-size-500">
                                         <input value="{{ old('slug') }}" type="text" name="slug">
                                 </div>
                             </div>
 
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox text-dark">
                                 <input type="checkbox" name="draft">
                                 Cocher si c'est un brouillon
                               </div>
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox text-dark">
                                 <input type="checkbox" name="active">
                                 Cocher si visible sur le site
                               </div>
@@ -56,7 +56,7 @@
                                 <br>
 
                                 <hr>
-                            <div class="col-mb-12 mb-3 font-weight-bold">
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
                                     <label for="contenu">Contenu de l'article : </label>
                                 </div>

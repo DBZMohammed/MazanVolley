@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700,900);
 
-
 // * {
 //     background-color: rgba(0, 0, 0, 0.2);
 // }
@@ -27,9 +26,20 @@
       position: relative;
 
   }
+  a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+  }
+
+  .card-body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+  }
 
   h1.font-weight-bold{
-    min-width: 280px;
+    // min-width: 280px;
+    min-height: 280px;
     font-size: 7rem !important;
     animation-name: jackInTheBox;
     animation-duration: 3s;
@@ -86,7 +96,6 @@
     height: 100%;
 
 }
-
 
 .btn-facebook {
     background-color: #405D9D;

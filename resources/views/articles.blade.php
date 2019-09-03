@@ -4,8 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-                {{ $posts->links() }}
 
+                <hr>
+                {{ $posts->links() }}
+            <hr>
                 @foreach($categories as $category)
                    <a class="btn btn-info mb-3 p-3" href="{{ route('category',['title' => $category->title]) }}">{{ $category->title }}</a>
                 @endforeach
@@ -20,7 +22,9 @@
             </div>
             <br>
             @endforeach
+            <hr>
             {{ $posts->links() }}
+        <hr>
         </div>
     </div>
 </div>

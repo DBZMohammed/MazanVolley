@@ -12,8 +12,10 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Livvic|Poppins:400i,500i|Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <title class="">{{ config('app.name', 'Laravel') }}</title>
@@ -23,7 +25,7 @@
 
     <header class="container-fluid p-1">
         <div class="row col-12 justify-content-between">
-                <a class="justify-content-xl-start p-2" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo2.png') }}" alt="background image"></a>
+                <a class="justify-content-xl-start p-2" href="{{ route('accueil') }}"><img width=200 height=200 src="{{ asset('img/logo/logo2.png') }}" alt="background image"></a>
 
                     <a class="navbar navbar-brand ml-5 align-content-center" href="{{ url('/') }}">
                         <h1 class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
@@ -63,7 +65,7 @@
                                             </li>
                                             <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
-                                                    href="{{ route('articles') }}">{{ __('Photos et vidéos') }}</a>
+                                                    href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
                                             </li>
 
                                             @guest
@@ -74,8 +76,8 @@
                                             @if (Route::has('register'))
                                                 {{-- <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
-                                                    href="{{ route('register') }}">{{ __('Créer un compte') }}</a> --}}
-                                            </li>
+                                                    href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                                            </li> --}}
                                             @endif
                                             @else
                                             <li class="nav-item dropdown m-4">
@@ -122,15 +124,6 @@
         @yield('content')
     </main>
     </div>
-
-    <aside class="container">
-<?php
-// @$request->session()->forget('key');
-
-?>
-    </aside>
-
-
     <footer class="footer p-4">
         <div class="container-fluid mx-auto text-center">
             <a href="http://www.ufolepvolley84.fr/"><img width=300 height=150 src="{{ asset('img/logo/logo_ufolep_cr_21.png') }}" alt="background image"></a>
