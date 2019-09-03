@@ -8241,6 +8241,10 @@ button.close {
   }
 }
 
+* {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 header {
   background-color: #1474b4;
 }
