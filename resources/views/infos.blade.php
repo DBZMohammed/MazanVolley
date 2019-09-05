@@ -21,6 +21,11 @@
                 <input type="file" class="custom-file-input" aria-describedby="inputGroupFileAddon01">
                 <label class="custom-file-label" for="inputGroupFile01">Choisir le fichier :</label>
             </div>
+            <br>
+            <div class="form-group">
+
+                <a href="{{ asset('/telechargement/bulletininscription.pdf') }}">Télécharger le fichier</a>
+            </div>
 
             <br>
             <br>
