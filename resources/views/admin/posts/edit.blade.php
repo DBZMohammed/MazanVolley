@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card text-center bg-info text-white">
+            <div class="card text-center bg-info text-dark">
                 <div class="card-header font-weight-bold">EDITION D'UN ARTICLE</div>
 
                 <div class="card-body">

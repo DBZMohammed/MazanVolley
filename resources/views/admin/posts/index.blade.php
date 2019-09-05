@@ -20,10 +20,9 @@
                     <tr class="text-center">
                         <th>TITRE</th>
                         <th>CATEGORIE</th>
+                        <th>PHOTOS/VIDEOS</th>
                         <th>PHOTOS</th>
                         <th>DATE DE CREATION</th>
-                        <th>DATE DE MODIFICATION</th>
-                        <th>ACTIONS</th>
                     </tr>
                 </thead>
                 @foreach($posts as $post)

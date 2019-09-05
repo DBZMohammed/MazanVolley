@@ -8241,36 +8241,106 @@ button.close {
   }
 }
 
-@media all and (max-device-width: 480px) {
-  /* Vos règles CSS pour les mobiles ici */
-
-  #title1 {
-    font-size: 16px;
-    width: auto;
-    height: auto;
-    flex-grow: 1;
-  }
-}
-
 @media all and (max-device-width: 860px) {
   /* Vos règles CSS pour les mobiles ici */
 
+  body {
+    width: 100%;
+  }
+
+  #logo {
+    padding: 8.5rem;
+    justify-content: center;
+  }
+
+  .logo {
+    width: auto;
+    height: auto;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .logoufolep {
+    width: 200px;
+    height: 100px;
+  }
+
+  .card-group {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .nav-link {
+    font-size: 9px;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .navbar-toggler-icon {
+    justify-content: center;
+  }
+
+  .img-rounded {
+    height: 150px;
+    width: 230px;
+  }
+
   #title1 {
-    font-size: 36px;
+    font-size: 24px;
+    text-align: center;
     width: auto;
     height: auto;
     flex-grow: 1;
   }
 }
 
-header {
-  background-color: #1474b4;
+@media all and (max-device-width: 480px) {
+  .title1 {
+    width: auto;
+    height: auto;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  #logo1 {
+    font-size: 8px;
+  }
+
+  .img-rounded {
+    height: 200px;
+    width: 320px;
+  }
+}
+
+#menu2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+}
+
+#menu1 {
+  background-color: #3795d4;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid;
+}
+
+#logo {
+  padding: 3rem;
+}
+
+body {
+  width: 100%;
 }
 
 .footer {
   bottom: 0;
   width: 100%;
-  background-color: #094872;
+  background-color: #1474b4;
 }
 
 main {
@@ -8280,7 +8350,6 @@ main {
   /* version standardisée */
   min-height: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 a {
@@ -8319,7 +8388,7 @@ h1.font-weight-bold {
   letter-spacing: 2px;
   margin: 11px 0 17px 0;
   color: #ffffff !important;
-  text-shadow: 0 13.36px 8.896px #000000, 0 -2px 25px #f10000;
+  text-shadow: 0 13.36px 8.896px #000000, 0 -2px 25px #BE0502;
   /* #c4b59d */
   letter-spacing: -4px;
 }

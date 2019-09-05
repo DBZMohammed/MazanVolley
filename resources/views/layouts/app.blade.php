@@ -19,51 +19,51 @@
 
 <body>
 
-    <header class="container-fluid p-1">
-        <div class="row col-12 justify-content-between">
-                <a class="logo1 justify-content-xl-start p-2" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo2.png') }}" alt="background image"></a>
+        <div id="logo" class="row col-xl-12 justify-content-between">
+                <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
 
-                    <a class="navbar navbar-brand ml-5 align-content-center" href="{{ url('/') }}">
-                        <h1 id="title1" class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
-                    </a>
-        </div>
+                <a  class="navbar navbar-brand" href="{{ url('/') }}">
+                    <h1 id="title1" class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
+                </a>
+            </div>
 
-                <div id="app p-5">
+    <header id="menu2">
+                <div id="app">
                     <div class="container-fluid">
-                        <div class="row d-flex justify-content-center">
+                        <div id="menu1" class="row d-flex justify-content-center">
 
-                            <nav class="navbar navbar-expand-lg navbar-light">
+                            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
                                 <a class="navbar-brand text-hide" href="{{ url('/') }}">
                                     {{ config('app.name', 'Laravel') }}
                                 </a>
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                                  <span class="navbar-toggler-icon"></span>
+                                  <span class="navbar-toggler-icon justify-content-center"></span>
                                 </button>
                                 <div class="collapse navbar-collapse align-content-between" id="navbarSupportedContent">
                                   <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item m-4">
+                                        <li class="nav-item m-2">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
                                                     href="{{ route('articles') }}">{{ __('La vie du club') }}</a>
                                             </li>
-                                            <li class="nav-item m-4">
+                                            <li class="nav-item m-2">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
                                                     href="{{ route('infos') }}">{{ __('Infos pratiques') }}</a>
                                             </li>
-                                            <li class="nav-item m-4">
+                                            <li class="nav-item m-2">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
                                                     href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
                                             </li>
 
                                             @guest
-                                            <li class="nav-item m-4">
-                                                <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link font-weight-bold btn btn-light text-dark"
                                                     href="{{ route('login') }}"><i id="nav-menu-cadenas" class="fas fa-user-lock"></i>{{ __('Administrateur') }}</a>
                                             </li>
 
-                                            <form class="form-inline m-4">
+                                            <form class="form-inline m-2">
                                                     <input class="form-control font-weight-bold btn btn-light text-dark m-auto" type="search" placeholder="Rechercher" aria-label="Rechercher">
-                                                    <button class="btn btn-outline-success font-weight-bold text-dark m-auto" type="submit">Rechercher</button>
+                                                    <button class="btn btn-light font-weight-bold text-dark m-auto" type="submit">Rechercher</button>
                                                   </form>
 
                                             @if (Route::has('register'))
@@ -73,7 +73,7 @@
                                             </li> --}}
                                             @endif
                                             @else
-                                            <li class="nav-item dropdown m-4">
+                                            <li class="nav-item dropdown m-2">
 
 
                                                 <a id="navbarDropdown" class="nav-link font-weight-bold btn btn-light text-dark"
@@ -111,23 +111,20 @@
                                         </ul>
                                 </div>
                               </nav>
-
-
-
-    </header>
+                            </header>
     <main class="container-fluid py-4">
         @yield('content')
     </main>
     </div>
     <footer class="footer p-4">
         <div class="container-fluid mx-auto text-center">
-            <a href="http://www.ufolepvolley84.fr/"><img width=300 height=150 src="{{ asset('img/logo/logo_ufolep_cr_21.png') }}" alt="background image"></a>
+            <a  href="http://www.ufolepvolley84.fr/"><img class="logoufolep" width=300 height=150 src="{{ asset('img/logo/logo_ufolep_cr_21.png') }}" alt="background image"></a>
 
         </div>
         <div class="container text-center">
-            <p class="text-white p-3 mb-3 "> © - M.V.B - MAZAN VOLLEY-BALL - 2019</p>
+            <p class="text-white p-3 mb-3 "> © - M.V.B - MAZAN VOLLEY-BALL - 2019 <a class="text-white"href="#">- Mentions legales -</a></p>
             <p class="text-white p-3 mb-3 ">
-                <a href="#">Mentions legales</a>
+
             </p>
             <section class="row">
                 <div class="col-12">
@@ -140,6 +137,20 @@
         </div>
     </footer>
     <!-- Scripts -->
+    <script>
+            window.onscroll = function() {myFunction()};
+
+            var menu1 = document.getElementById("menu1");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+              if (window.pajavascript:void(0)geYOffset >= sticky) {
+                menu1.classList.add("sticky")
+              } else {
+                menu1.classList.remove("sticky");
+              }
+            }
+            </script>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -27,12 +27,37 @@
                             @csrf
                             <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
-                                    <label for="title">Nom du licencié : </label>
+                                    <label for="title">Nom : </label>
                                 </div>
                                 <div class="font-size-500">
                                         <input value="{{ old('title') }}" type="text" name="title">
                                 </div>
                             </div>
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
+                                <div>
+                                    <label for="title">Prénom : </label>
+                                </div>
+                                <div class="font-size-500">
+                                        <input value="{{ old('title') }}" type="text" name="title">
+                                </div>
+                            </div>
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
+                                <div>
+                                    <label for="title">Age : </label>
+                                </div>
+                                <div class="font-size-500">
+                                        <input value="{{ old('title') }}" type="text" name="title">
+                                </div>
+                            </div>
+                            <div class="col-mb-12 mb-3 font-weight-bold text-dark">
+                                <div>
+                                    <label for="title">Adresse : </label>
+                                </div>
+                                <div class="font-size-500">
+                                        <input value="{{ old('title') }}" type="text" name="title">
+                                </div>
+                            </div>
+
 
                             <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
@@ -45,11 +70,11 @@
 
                             <div class="custom-control custom-checkbox text-dark">
                                 <input type="checkbox" name="draft">
-                                Cocher si c'est un brouillon
+                                Cocher si c'est un nouveau licencié.
                               </div>
                             <div class="custom-control custom-checkbox text-dark">
-                                <input type="checkbox" name="active">
-                                Cocher si visible sur le site
+                                <input type="checkbox" name="active" checked>
+                                Cocher pour ajouter sur le site.
                               </div>
 
 
@@ -58,7 +83,7 @@
                                 <hr>
                             <div class="col-mb-12 mb-3 font-weight-bold text-dark">
                                 <div>
-                                    <label for="contenu">Contenu de l'article : </label>
+                                    <label for="contenu">Commentaire : </label>
                                 </div>
                                 <div>
                                     <textarea name="content" id="content" style="width:100%" rows="5">{{ old('content') }}</textarea>

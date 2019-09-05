@@ -3,37 +3,111 @@
 // * {
 //     background-color: rgba(0, 0, 0, 0.2);
 // }
-@media all and (max-device-width: 480px)
-{
-  /* Vos règles CSS pour les mobiles ici */
-  #title1{
-    font-size: 16px;
-    width: auto;
-    height: auto;
-    flex-grow: 1;
-  }
 
-}
 @media all and (max-device-width: 860px)
 {
+
   /* Vos règles CSS pour les mobiles ici */
+  body{
+    width: 100%;
+}
+    #logo{
+        padding: 8.5rem;
+        justify-content: center;
+
+    }
+    .logo{
+        // padding-top: 32rem;
+        width: auto;
+        height: auto;
+        flex-grow: 1;
+        justify-content: center;
+
+      }
+      .logoufolep{
+        width: 200px;
+        height: 100px;
+      }
+      .card-group{
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+    .nav-link{
+        font-size: 9px;
+    }
+    .navbar-nav{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .navbar-toggler-icon{
+        justify-content: center;
+    }
+.img-rounded{
+    height: 150px;
+    width: 230px;
+}
   #title1{
-    font-size: 36px;
+    font-size: 24px;
+    // justify-content: center;
+    text-align: center;
     width: auto;
     height: auto;
     flex-grow: 1;
   }
+
+}
+@media all and (max-device-width: 480px)
+{
+  .title1{
+    width: auto;
+    height: auto;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  #logo1{
+    font-size: 8px;
+
+  }
+  .img-rounded{
+    height: 200px;
+    width: 320px;
 }
 
-  header{
-    background-color:  rgb(20, 116, 180);
-  }
+}
+
+#menu2{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+
+}
+
+#menu1 {
+    background-color:  rgb(55, 149, 212);
+    padding: 0px 0px 0px 0px;
+    border: 1px solid;
+}
+
+#logo{
+
+    padding: 3rem;
+//   background-color: rgb(20, 116, 180)
+
+}
+
+body{
+    width: 100%;
+}
 
   .footer{
     //   position: relative;
       bottom: 0;
       width: 100%;
-      background-color:   rgb(9, 72, 114);
+      background-color:  rgb(20, 116, 180);
 
   }
 
@@ -44,7 +118,7 @@
     //   max-width: 1280px;
       min-height: 100%;
       margin:0 auto;
-      position: relative;
+    //   position: relative;
 
   }
   a{
@@ -82,7 +156,7 @@
     letter-spacing: 2px;
     margin: 11px 0 17px 0;
     color: #ffffff !important;
-    text-shadow: 0 13.36px 8.896px #000000,0 -2px 25px rgb(241, 0, 0);
+    text-shadow: 0 13.36px 8.896px #000000,0 -2px 25px #BE0502;
   /* #c4b59d */
   letter-spacing: -4px;
   }
@@ -131,55 +205,55 @@
       transform: translate3d(100%, 0, 0) skewX(-30deg);
       opacity: 0;
     }
-  
+
     60% {
       -webkit-transform: skewX(20deg);
       transform: skewX(20deg);
       opacity: 1;
     }
-  
+
     80% {
       -webkit-transform: skewX(-5deg);
       transform: skewX(-5deg);
     }
-  
+
     to {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
   }
-  
+
   @keyframes lightSpeedIn {
     from {
       -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
       transform: translate3d(100%, 0, 0) skewX(-30deg);
       opacity: 0;
     }
-  
+
     60% {
       -webkit-transform: skewX(20deg);
       transform: skewX(20deg);
       opacity: 1;
     }
-  
+
     80% {
       -webkit-transform: skewX(-5deg);
       transform: skewX(-5deg);
     }
-  
+
     to {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
   }
-  
+
   .lightSpeedIn {
     -webkit-animation-name: lightSpeedIn;
     animation-name: lightSpeedIn;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
-  
+
 .logo1{
     animation-name:flip;
     animation-duration: 5s;
@@ -193,7 +267,7 @@
       -webkit-animation-timing-function: ease-out;
       animation-timing-function: ease-out;
     }
-  
+
     40% {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
         rotate3d(0, 1, 0, -190deg);
@@ -202,7 +276,7 @@
       -webkit-animation-timing-function: ease-out;
       animation-timing-function: ease-out;
     }
-  
+
     50% {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
         rotate3d(0, 1, 0, -170deg);
@@ -211,7 +285,7 @@
       -webkit-animation-timing-function: ease-in;
       animation-timing-function: ease-in;
     }
-  
+
     80% {
       -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
         rotate3d(0, 1, 0, 0deg);
@@ -220,7 +294,7 @@
       -webkit-animation-timing-function: ease-in;
       animation-timing-function: ease-in;
     }
-  
+
     to {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
         rotate3d(0, 1, 0, 0deg);
@@ -229,7 +303,7 @@
       animation-timing-function: ease-in;
     }
   }
-  
+
   @keyframes flip {
     from {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
@@ -238,7 +312,7 @@
       -webkit-animation-timing-function: ease-out;
       animation-timing-function: ease-out;
     }
-  
+
     40% {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
         rotate3d(0, 1, 0, -190deg);
@@ -247,7 +321,7 @@
       -webkit-animation-timing-function: ease-out;
       animation-timing-function: ease-out;
     }
-  
+
     50% {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
         rotate3d(0, 1, 0, -170deg);
@@ -256,7 +330,7 @@
       -webkit-animation-timing-function: ease-in;
       animation-timing-function: ease-in;
     }
-  
+
     80% {
       -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
         rotate3d(0, 1, 0, 0deg);
@@ -265,7 +339,7 @@
       -webkit-animation-timing-function: ease-in;
       animation-timing-function: ease-in;
     }
-  
+
     to {
       -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
         rotate3d(0, 1, 0, 0deg);
@@ -274,7 +348,7 @@
       animation-timing-function: ease-in;
     }
   }
-  
+
   .animated.flip {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
