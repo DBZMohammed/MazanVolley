@@ -32,7 +32,7 @@
                     <div class="container-fluid">
                         <div id="menu1" class="row d-flex justify-content-center">
 
-                            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+                            <nav class="navbar navbar-expand-lg navbar-light justify-content-center mb-0">
                                 <a class="navbar-brand text-hide" href="{{ url('/') }}">
                                     {{ config('app.name', 'Laravel') }}
                                 </a>
