@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                   <h2 class=" text-center">Vous êtes sur la page officielle du M.V.B !</h2>
+                   <h2 class=" text-center text-dark">Vous êtes sur la page officielle du M.V.B !</h2>
                 </div>
 
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -45,7 +45,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <span> Le plaisir du sport collectif... </span>
+                    <span class="text-dark"> Le plaisir du sport collectif... </span>
 
                 </div>
             </div>
