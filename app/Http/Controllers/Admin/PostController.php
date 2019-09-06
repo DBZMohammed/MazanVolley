@@ -126,8 +126,8 @@ class PostController extends Controller
 
 
 
-    public function uploads() {
-        return view('admin.posts.uploads');
+    public function uploadsA() {
+        return view('admin.posts.uploadsA');
 
     }
 }

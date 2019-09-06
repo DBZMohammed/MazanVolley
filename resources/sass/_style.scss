@@ -87,14 +87,18 @@
 }
 
 #menu1 {
-    background-color:  rgb(55, 149, 212);
+    background-color:  rgb(255, 255, 255);
     justify-content: center;
     padding: 0px 0px 0px 0px;
     border: 1px solid;
 }
 
-#logo{
 
+#logo{
+    background: url('img/Background/BD6530.jpg') no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    // margin-bottom: 1rem;
     padding: 3rem;
 //   background-color: rgb(20, 116, 180)
 
@@ -102,18 +106,42 @@
 
 body{
     width: 100%;
+//     height: 100vh;
+//   background: #84e8dc;
+//   background: -moz-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+//   background: -webkit-linear-gradient(-45deg, #84e8dc 0%,#f4ed8b 100%);
+//   background: linear-gradient(135deg, #84e8dc 0%,#f4ed8b 100%);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+//   height: 100vh;
+//   background: #141E30 no-repeat fixed;
+//   background: -webkit-linear-gradient(to top, #243B55, #141E30);
+//   background: linear-gradient(to top, #243B55, #141E30);
+
+color: #fff;
+background: -webkit-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+background: -o-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+background: -moz-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+background-size: cover;
+background-position: 50% 21%;
+text-align: right;
+
 }
 
   .footer{
     //   position: relative;
-      bottom: 0;
+    // background: url('img/Background/background-body2.jpg') no-repeat fixed;
+    // position: fixed;
+    bottom: 0;
       width: 100%;
-      background-color:  rgb(20, 116, 180);
+      background-color:  rgb(255, 255, 255);
 
   }
 
   main{
-        background: url('img/Background/Volleyball_ball3.jpg') no-repeat center fixed;
+        // background: url('img/Background/background-body2.jpg') no-repeat center fixed;
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover; /* version standardisée */
     //   max-width: 1280px;
@@ -122,10 +150,30 @@ body{
     //   position: relative;
 
   }
-  a{
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+//   a{
+//     font-family: 'Poppins', sans-serif;
+//     font-size: 18px;
+//   }
+
+
+
+
+
+.link {
+    // padding: 1rem;
+    transition: all 0.8s;
+    // flex-basis: auto;
+
+    // border: 1px inset black
+}
+.link :hover {
+    // background: rgb(235, 198, 198);
+    // font-size: 14px;
+    // padding: 1.5rem;
+    transform: scale(1.2);
+    border: 3px inset black
   }
+
   .card-body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -140,6 +188,7 @@ body{
     max-width: 100%;
     height: auto;
     display: block;
+    // box-shadow: 10px 10px 5px grey;
   }
 
   // animations
@@ -148,14 +197,14 @@ body{
     // min-width: 280px;
     min-height: 280px;
     font-size: 5rem;
-    animation-name: jackInTheBox;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-direction: alternate;
+    // animation-name: flip;
+    // animation-duration: 3s;
+    // animation-iteration-count: 1;
+    // animation-direction: alternate;
     font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 11px 0 17px 0;
+    margin: -10px 0 17px 0;
     color: #ffffff !important;
     text-shadow: 0 13.36px 8.896px #000000,0 -2px 25px #BE0502;
   /* #c4b59d */
@@ -257,8 +306,14 @@ body{
 
 .logo1{
     animation-name:flip;
-    animation-duration: 5s;
+    animation-duration: 3s;
+    transition: all 0.8s;
+
 }
+.logo1 :hover {
+      transform: scale(1.2);
+
+  }
 
   @-webkit-keyframes flip {
     from {
@@ -361,3 +416,16 @@ body{
     background-color: #405D9D;
     color: #fff;
   }
+
+.responsive {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    animation-duration: 3s;
+    transition: all 0.8s;
+}
+
+
+.responsive :hover {
+    transform: scale(1.2);
+}

@@ -19,52 +19,66 @@
 
 <body>
 
-        <div id="logo" class="row col-xl-12 justify-content-between">
-                <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
+    <div id="logo" class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+            {{-- <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a> --}}
 
-                <a  class="navbar navbar-brand" href="{{ url('/') }}">
-                    <h1 id="title1" class="font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
-                </a>
-            </div>
+            <a  class="navbar navbar-brand" href="{{ url('/') }}">
+                <h1 id="title1" class="link font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
+            </a>
 
+            <div class="link">
+
+                <span>
+                     <a href="https://fr-fr.facebook.com/pages/category/Sports-Club/Mazan-Volley-ball-1883689478318448/" class="link btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                </span>
+
+
+
+        </div>
+        </div>
+
+        </div>
     <header id="menu2">
                 <div id="app">
                     <div class="container-fluid">
                         <div id="menu1" class="row d-flex justify-content-center">
 
                             <nav class="navbar navbar-expand-lg navbar-light justify-content-center mb-0">
-                                <a class="navbar-brand text-hide" href="{{ url('/') }}">
+                                {{-- <a class="navbar-brand text-hide" href="{{ url('/') }}">
                                     {{ config('app.name', 'Laravel') }}
-                                </a>
+                                </a> --}}
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                                   <span class="navbar-toggler-icon justify-content-center"></span>
                                 </button>
                                 <div class="collapse navbar-collapse align-content-between" id="navbarSupportedContent">
                                   <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item m-2">
-                                                <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
+                                        <li class="link nav-item m-auto p-2">
+                                                <a class="link nav-link btn btn-light text-dark m-auto"
                                                     href="{{ route('articles') }}">{{ __('La vie du club') }}</a>
                                             </li>
-                                            <li class="nav-item m-2">
-                                                <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
+                                            <li class="link nav-item m-auto p-2">
+                                                <a class="link nav-link btn btn-light text-dark m-auto"
                                                     href="{{ route('infos') }}">{{ __('Infos pratiques') }}</a>
                                             </li>
-                                            <li class="nav-item m-2">
-                                                <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
+
+                                            <li class="link nav-item m-auto p-2">
+                                                <a class="link nav-link btn btn-light text-dark m-auto"
                                                     href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
                                             </li>
 
+                                            <li class="logo1 nav-link p-3">
+                                                    <a class="logo1" href="{{ route('accueil') }}"><img class="link" width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
+                                            </li>
+
                                             @guest
-                                            <li class="nav-item m-2">
-                                                <a class="nav-link font-weight-bold btn btn-light text-dark"
+                                            <li class="link nav-item m-auto p-2">
+                                                <a class="link nav-link btn btn-light text-dark"
                                                     href="{{ route('login') }}"><i id="nav-menu-cadenas" class="fas fa-user-lock"></i>{{ __('Administrateur') }}</a>
                                             </li>
 
-                                            <form class="form-inline m-2">
-                                                    <input class="form-control font-weight-bold btn btn-light text-dark m-auto" type="search" placeholder="Rechercher" aria-label="Rechercher">
-                                                    <button class="btn btn-light font-weight-bold text-dark m-auto" type="submit">Rechercher</button>
-                                                  </form>
+
 
                                             @if (Route::has('register'))
                                                 {{-- <li class="nav-item m-4">
@@ -73,10 +87,10 @@
                                             </li> --}}
                                             @endif
                                             @else
-                                            <li class="nav-item dropdown m-2">
+                                            <li class="link nav-item dropdown m-auto p-2">
 
 
-                                                <a id="navbarDropdown" class="nav-link font-weight-bold btn btn-light text-dark"
+                                                <a id="navbarDropdown" class="link nav-link font-weight-bold btn btn-light text-dark"
                                                     href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                                                     aria-expanded="false" v-pre><i class="fas fa-user-check"></i>
                                                     Bonjour,    {{ Auth::user()->prenom }} <span class="caret"></span>
@@ -91,7 +105,7 @@
 
                                                     <a class="dropdown-item" href="{{ route('licences') }}"> licence </a>
 
-                                                    <a class="dropdown-item" href="{{ route('uploads') }}"> uploads </a>
+                                                    <a class="dropdown-item" href="{{ route('uploadsA') }}"> uploads </a>
 
 
 
@@ -108,6 +122,10 @@
                                                 </div>
                                             </li>
                                             @endguest
+                                                <form class="form-inline m-auto">
+                                                    <input class="form-control font-weight-bold btn btn-light text-dark m-auto" type="search" placeholder="Rechercher" aria-label="Rechercher">
+                                                    <button class="btn btn-light font-weight-bold text-dark m-auto" type="submit">Rechercher</button>
+                                                </form>
                                         </ul>
                                 </div>
                               </nav>
@@ -122,14 +140,14 @@
 
         </div>
         <div class="container text-center">
-            <p class="text-white p-3 mb-3 "> © - M.V.B - MAZAN VOLLEY-BALL - 2019 <a class="text-white"href="#">- Mentions legales -</a></p>
-            <p class="text-white p-3 mb-3 ">
-
+            <p class="text-dark p-3 mb-3 "> © - M.V.B - MAZAN VOLLEY-BALL - 2019 </p>
+            <p class="text-dark p-3 mb-3 ">
+                <a class="text-dark"href="#">- Mentions legales -</a>
             </p>
             <section class="row">
                 <div class="col-12">
 
-                        <span class=" text-white">Nous rejoindre sur :</span>
+                        <span class=" text-dark">Nous rejoindre sur :</span>
                             <a href="https://fr-fr.facebook.com/pages/category/Sports-Club/Mazan-Volley-ball-1883689478318448/" class="btn btn-facebook"><i class="fab fa-facebook-f"></i>acebook</a>
 
                         </div>

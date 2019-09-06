@@ -111,4 +111,5 @@ class PageController extends Controller
         return redirect()->route('pages.index');
 
     }
+
 }

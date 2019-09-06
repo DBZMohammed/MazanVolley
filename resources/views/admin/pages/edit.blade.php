@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     {{-- Formulaire --}}
-                    <form action="{{ route('posts.update', ['id' => $post->id]) }}" method="POST">
+                    <form action="{{ route('pages.update', ['id' => $page->id]) }}" method="POST">
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>

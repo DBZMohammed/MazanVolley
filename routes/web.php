@@ -10,8 +10,8 @@ Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')
     // Route::put('posts/{id}/update', 'PostController@update')->name('posts.update');
     // Route::get('posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
+    Route::get('/uploadsA', 'PostController@uploadsA')->name('uploadsA');
     Route::get('/licences', 'PostController@licences')->name('licences');
-    Route::get('/uploads', 'PostController@uploads')->name('uploads');
     Route::resource('posts', 'PostController');
     Route::resource('pages', 'PageController');
 
@@ -20,30 +20,40 @@ Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')
 
 Route::resource('comments', 'CommentController');
 
+// à propos non utilisé .
 Route::get('/', function (){
     // echo('A propos');
     return view('a-propos');
 })->name('accueil');
 
+// page d'accueil
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//page de l'article selectionné
+
 Route::get('article/{id}', 'PostController@article')->name('article');
 
+//page articles par categories
+Route::get('category/{title}', 'PostController@category')->name('category');
+
+// page des articles
 Route::get('articles', 'PostController@articles')->name('articles');
 
+//page des infos pratiques
 Route::get('infos', 'PostController@infos')->name('infos');
 
+//page des photos et vidéos
 Route::get('uploads', 'PostController@uploads')->name('uploads');
 
 
-    // ->middleware('checkAdmin')
 
 
 
-Route::get('category/{title}', 'PostController@category')->name('category');
 
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 ?>

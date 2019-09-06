@@ -8324,28 +8324,39 @@ button.close {
 }
 
 #menu1 {
-  background-color: #3795d4;
+  background-color: white;
   justify-content: center;
   padding: 0px 0px 0px 0px;
   border: 1px solid;
 }
 
 #logo {
+  background: url(/images/BD6530.jpg?555fc280c07e359cc5c585e85ad31b60) no-repeat center fixed;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
   padding: 3rem;
 }
 
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url(/images/background-body2.jpg?162e8818c9f5363c41dd04d5aec799c9);
+  background-size: cover;
+  background-position: 50% 21%;
+  text-align: right;
 }
 
 .footer {
   bottom: 0;
   width: 100%;
-  background-color: #1474b4;
+  background-color: white;
 }
 
 main {
-  background: url(/images/Volleyball_ball3.jpg?1138aa9ef0fc7933216e03adb066f080) no-repeat center fixed;
   /* pour anciens Chrome et Safari */
   background-size: cover;
   /* version standardisée */
@@ -8353,9 +8364,13 @@ main {
   margin: 0 auto;
 }
 
-a {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
+.link {
+  transition: all 0.8s;
+}
+
+.link :hover {
+  transform: scale(1.2);
+  border: 3px inset black;
 }
 
 .card-body {
@@ -8376,18 +8391,10 @@ a {
 h1.font-weight-bold {
   min-height: 280px;
   font-size: 5rem;
-  -webkit-animation-name: jackInTheBox;
-          animation-name: jackInTheBox;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
   font-family: "Permanent Marker", cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 11px 0 17px 0;
+  margin: -10px 0 17px 0;
   color: #ffffff !important;
   text-shadow: 0 13.36px 8.896px #000000, 0 -2px 25px #BE0502;
   /* #c4b59d */
@@ -8500,8 +8507,13 @@ h2 {
 .logo1 {
   -webkit-animation-name: flip;
           animation-name: flip;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transition: all 0.8s;
+}
+
+.logo1 :hover {
+  transform: scale(1.2);
 }
 
 @-webkit-keyframes flip {
@@ -8578,5 +8590,18 @@ h2 {
 .btn-facebook {
   background-color: #405D9D;
   color: #fff;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transition: all 0.8s;
+}
+
+.responsive :hover {
+  transform: scale(1.2);
 }
 
