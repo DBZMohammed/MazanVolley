@@ -40,17 +40,7 @@ class PageController extends Controller
         $page->slug = $data['slug'];
         $page->content = $data['content'];
 
-        if(isset($data['draft'])) {
-            $page->draft = true;
-        }else {
-                $page->draft = false;
-            }
 
-        if(isset($data['active'])) {
-            $page->active = true;
-        }else {
-                $page->active = false;
-            }
 
         $page->save();
 
@@ -83,17 +73,6 @@ class PageController extends Controller
         $page->slug = $data['slug'];
         $page->content = $data['content'];
 
-        if(isset($data['draft'])) {
-            $page->draft = true;
-        }else {
-                $page->draft = false;
-            }
-
-        if(isset($data['active'])) {
-            $page->active = true;
-        }else {
-                $page->active = false;
-            }
 
         $page->save();
         Session::flash('status', 'Votre page a bien été modifiée !');

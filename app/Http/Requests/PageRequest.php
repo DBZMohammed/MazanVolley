@@ -27,8 +27,7 @@ class PageRequest extends FormRequest
             'title' => 'required|max:100',
             'content' => 'required|max:255',
             'slug' => 'nullable',
-            'draft' => 'nullable',
-            'active' => 'nullable',
+            'photo' => 'mimes:jpeg,jpg,bmp,png'
 
         ];
     }

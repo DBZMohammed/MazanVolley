@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     {{-- Formulaire --}}
-                    <form action="{{ route('pages.update', ['id' => $page->id]) }}" method="POST">
+                    <form action="{{ route('posts.update', ['id' => $post->id]) }}" enctype="multipart/form-data" method="POST">
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -36,22 +36,13 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="custom-control custom-checkbox">
-                                    <input @if(old('draft')||($post->draft)) checked="checked" @endif type="checkbox" name="draft" >
-                                    Ceci est un brouillon !
-                                  </div>
-                                <div class="custom-control custom-checkbox">Actif :
-                                    <input @if(old('active')||($post->active)) checked="checked" @endif type="checkbox" name="active">
-                                    Cocher si visible sur le site
-                                  </div>
-                                  <br>
-                                  <label class="label">Selectionner un Format : </label>
-                                  <select name="theme">
-                                      <option value="Symphony">Symphony</option>
-                                      <option value="Laravel">Laravel</option>
-                                      <option value="Wordpress">Wordpress</option>
-                                    </select>
-
+                            <br>
+                            <div class="custom-file">
+                                    <div class="btn btn-primary btn-sm float-left">
+                                      <span>Choisir le fichier :</span>
+                                      <input name="photo" type="file" multiple>
+                                    </div>
+                                </div>
                                   <br>
                                   <br>
                                   <label class="label">Selectionner une categorie : </label>
@@ -75,6 +66,7 @@
                                     <textarea name="content" id="content" style="width:100%" rows="5"> @if(old('content')) {{ old('content') }} @else {{ $post->content }} @endif </textarea>
                                 </div>
                             </div>
+
                             <div class="col-mb-12 mb-3">
 
                             <button type="submit" class="btn btn-light btn-lg font-weight-bold">Envoyer</button>

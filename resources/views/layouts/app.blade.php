@@ -19,14 +19,15 @@
 
 <body>
 
-    <div id="logo" class="container-fluid">
-        <div class="row justify-content-between align-content-center">
-            <div class="col-12-xl">
+    <div id="logo" class="container-fluid bg-white">
+        <div class="row d-flex flex-wrap justify-content-between align-content-center">
+            <div class="logo1 col-6 m-auto">
+                <a class="logo1 p-2" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
+            </div>
+            <div id="logo1" class="col-6 m-auto">
                 <a  class="navbar navbar-brand" href="{{ url('/') }}">
-                    <h1 id="title1" class="link font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
+                    <h1 id="title1" class="link font-weight-bold text-white"> {{ config('app.name', 'Laravel') }} </h1>
                 </a>
-
-                <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
             </div>
         </div>
     </div>
@@ -34,9 +35,9 @@
     <header id="menu2">
                 <div id="app">
                     <div class="container-fluid">
-                        <div id="menu1" class="row d-flex justify-content-center">
+                        <div id="menu1" class="row d-flex justify-content-center p-2">
 
-                            <nav class="navbar navbar-expand-lg navbar-light justify-content-center mb-0">
+                            <nav class="navbar navbar-expand-lg navbar-light">
                                 {{-- <a class="navbar-brand text-hide" href="{{ url('/') }}">
                                     {{ config('app.name', 'Laravel') }}
                                 </a> --}}
@@ -45,18 +46,18 @@
                                   <span class="navbar-toggler-icon justify-content-center"></span>
                                 </button>
                                 <div class="collapse navbar-collapse align-content-between" id="navbarSupportedContent">
-                                  <ul class="navbar-nav mr-auto">
+                                  <ul class="navbar-nav p-2">
                                         <li class="link nav-item m-auto p-2">
-                                                <a class="link nav-link btn btn-light text-dark m-auto"
+                                                <a class="link nav-link btn btn-light text-dark"
                                                     href="{{ route('articles') }}">{{ __('La vie du club') }}</a>
                                             </li>
                                             <li class="link nav-item m-auto p-2">
-                                                <a class="link nav-link btn btn-light text-dark m-auto"
+                                                <a class="link nav-link btn btn-light text-dark"
                                                     href="{{ route('infos') }}">{{ __('Infos pratiques') }}</a>
                                             </li>
 
                                             <li class="link nav-item m-auto p-2">
-                                                <a class="link nav-link btn btn-light text-dark m-auto"
+                                                <a class="link nav-link btn btn-light text-dark"
                                                     href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
                                             </li>
                                             @guest
@@ -68,10 +69,10 @@
 
 
                                             @if (Route::has('register'))
-                                                {{-- <li class="nav-item m-4">
+                                                <li class="nav-item m-4">
                                                 <a class="nav-link font-weight-bold btn btn-light text-dark m-auto"
                                                     href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
-                                            </li> --}}
+                                            </li>
                                             @endif
                                             @else
                                             <li class="link nav-item dropdown m-auto p-2">

@@ -18,11 +18,11 @@
 
                 <thead class="thead-dark">
                     <tr class="text-center">
-                        <th>TITRE</th>
-                        <th>CATEGORIE</th>
-                        <th>PHOTOS/VIDEOS</th>
-                        <th>PHOTOS</th>
-                        <th>DATE DE CREATION</th>
+                        <th class="text-center">TITRE</th>
+                        <th class="text-center">CATEGORIE</th>
+                        <th class="text-center">DATE DE CREATION</th>
+                        <th class="text-center">DATE DE MODIFICATION</th>
+                        <th class="text-center">ACTION</th>
                     </tr>
                 </thead>
                 @foreach($posts as $post)

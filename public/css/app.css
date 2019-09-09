@@ -8251,6 +8251,7 @@ button.close {
   #logo {
     padding: 8.5rem;
     justify-content: center;
+    flex-grow: 1;
   }
 
   .logo {
@@ -8290,9 +8291,14 @@ button.close {
 
   #title1 {
     font-size: 24px;
+    justify-content: center;
     text-align: center;
     width: auto;
     height: auto;
+    flex-grow: 1;
+  }
+
+  .row {
     flex-grow: 1;
   }
 }
@@ -8321,20 +8327,19 @@ button.close {
   top: 0px;
   width: 100%;
   z-index: 99;
+  flex-basis: auto;
+  min-width: 300px;
 }
 
 #menu1 {
+  max-height: 10rem;
   background-color: white;
   justify-content: center;
-  padding: 0px 0px 0px 0px;
+  padding: 8px 8px 8px 8px;
   border: 1px solid;
 }
 
 #logo {
-  background: url(/images/BD6530.jpg?555fc280c07e359cc5c585e85ad31b60) no-repeat center fixed;
-  /* pour anciens Chrome et Safari */
-  background-size: cover;
-  /* version standardisée */
   padding: 3rem;
 }
 
@@ -8388,7 +8393,7 @@ main {
 
 h1.font-weight-bold {
   min-height: 280px;
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: "Permanent Marker", cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -8503,8 +8508,8 @@ h2 {
 }
 
 .logo1 {
-  -webkit-animation-name: flip;
-          animation-name: flip;
+  -webkit-animation-name: jackInTheBox;
+          animation-name: jackInTheBox;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   transition: all 0.8s;
@@ -8512,77 +8517,6 @@ h2 {
 
 .logo1 :hover {
   transform: scale(1.2);
-}
-
-@-webkit-keyframes flip {
-  from {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-}
-
-@keyframes flip {
-  from {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-}
-
-.animated.flip {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  -webkit-animation-name: flip;
-  animation-name: flip;
 }
 
 .btn-facebook {

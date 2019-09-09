@@ -9,6 +9,7 @@ use App\Mail\ContactReceived;
 use App\models\Post;
 use App\models\category;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -25,6 +26,7 @@ class PostController extends Controller
 
     public function create()
     {
+
         $categories = Category::all();
         return view('admin.posts.create',[
             'categories' => $categories
@@ -35,25 +37,11 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $postData = $request->validated();
-
-        dump($postData);
-
         $post = new Post;
         $post->title = $postData['title'];
         $post->content = $postData['content'];
         $post->category_id = $postData['category_id'];
-        $post->theme = $postData['theme'];
-        if(isset($postData['draft'])) {
-            $post->draft = true;
-        }else {
-                $post->draft = false;
-            }
-
-        if(isset($postData['active'])) {
-            $post->active = true;
-        }else {
-                $post->active = false;
-            }
+        $post->photo = Storage::disk('public')->put('uploads', $postData['photo']);
 
         $post->save();
 
@@ -85,18 +73,7 @@ class PostController extends Controller
         $post->title = $postData['title'];
         $post->content = $postData['content'];
         $post->category_id = $postData['category_id'];
-        $post->theme = $postData['theme'];
-
-        if(isset($postData['draft'])) {
-            $post->draft = true;
-        }else {
-                $post->draft = false;
-            }
-            if(isset($postData['active'])) {
-                $post->active = true;
-            }else {
-                $post->active = false;
-            }
+        $post->photo = Storage::disk('public')->put('uploads', $postData['photo']);
 
             $post->save();
 

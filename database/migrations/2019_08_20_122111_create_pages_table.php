@@ -17,9 +17,8 @@ class CreatePagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
+            $table->string('photo')->nullable();
             $table->longText('content')->nullable();
-            $table->boolean('draft')->default(0); // O (faux) 1 (vrai)
-            $table->boolean('active')->default(0); // O (faux) 1 (vrai)
             $table->timestamps(); // created_at & updated_at
         });
     }

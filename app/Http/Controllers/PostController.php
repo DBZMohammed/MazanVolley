@@ -31,8 +31,6 @@ class PostController extends Controller
 
         $categories = Category::all();
         $posts = Post::where([
-            ['active','=', true],
-            ['draft','=', false],
             ['category_id','=', $category->id]
 
         ])
@@ -59,12 +57,7 @@ class PostController extends Controller
         public function articles(){
 
             $categories = Category::all();
-            $posts = Post::where([
-                ['active','=', true],
-                ['draft','=', false]
-
-            ])
-            ->orderBy('created_at','DESC')
+            $posts = Post::orderBy('created_at','DESC')
             ->paginate(9);
 
             $posts = Post::paginate(10);

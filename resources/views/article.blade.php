@@ -8,13 +8,15 @@
             <div class="card">
                 <div class="card-header">{{ $post->title }}</div>
                 <div class="card-body">
-                  {{ $post->content }}
-                </div>
+                    <a href="{{ asset('storage/'.$post->photo) }}"><img src="{{ asset('storage/'.$post->photo) }}"  class="responsive img-thumbnail" alt="Image"></a>
+
+                        {{ $post->content }}
+                    </div>
             </div>
         </div>
     </div>
 
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Commentaires</div>

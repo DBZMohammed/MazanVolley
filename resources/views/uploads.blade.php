@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container d-flex justify-content-center">
-  <h2> - Voici notre belle équipe - </h2>
+  <h2 class="text-white"> - Voici notre belle équipe - </h2>
 </div>
 
 <div class="container-fluid">

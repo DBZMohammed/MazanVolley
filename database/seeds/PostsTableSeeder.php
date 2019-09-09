@@ -13,13 +13,11 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        $theme = ['Symphony','Laravel','Wordpress'];
+
             DB::table('posts')->insert([
                 'title' =>'',
                 'content' => Str::random(255),
-                'draft' => 0,
-                'active' => rand (0,1),
-                'theme' => $theme[rand(0,2)],
+                'photo' => Str::random(255),
                 'created_at' => new DateTime('now'),
                 'updated_at' => new DateTime('now')
 
@@ -28,13 +26,11 @@ class PostsTableSeeder extends Seeder
 
         for ($i = 1; $i < 20; $i++) {
 
-            $theme = ['Symphony','Laravel','Wordpress'];
+
             DB::table('posts')->insert([
                 'title' => Str::random(10),
                 'content' => Str::random(255),
-                'draft' => 0,
-                'active' => rand (0,1),
-                'theme' => $theme[rand(0,2)],
+                'photo' => Str::random(255),
                 'created_at' => new DateTime('now'),
                 'updated_at' => new DateTime('now')
 

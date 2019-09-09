@@ -17,10 +17,8 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('content')->nullable();
-            $table->boolean('draft')->default(0);
-            $table->boolean('active')->default(0);
             $table->timestamps();
-            $table->enum('theme',['Symphony','Laravel','Wordpress']);
+
         });
     }
 

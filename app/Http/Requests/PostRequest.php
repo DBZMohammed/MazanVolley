@@ -26,10 +26,9 @@ class PostRequest extends FormRequest
         return [
             'title' => 'required|max:100',
             'content' => 'required|max:255',
-            'draft' => 'nullable',
-            'active' => 'nullable',
-            'theme' => 'required|string',
-            'category_id' => 'required|integer'
+            'category_id' => 'required|integer',
+            'photo' => 'mimes:jpeg,jpg,bmp,png'
+
         ];
     }
 }

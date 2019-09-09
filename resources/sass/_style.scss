@@ -14,6 +14,7 @@
     #logo{
         padding: 8.5rem;
         justify-content: center;
+        flex-grow: 1;
 
     }
     .logo{
@@ -50,11 +51,14 @@
 }
   #title1{
     font-size: 24px;
-    // justify-content: center;
+    justify-content: center;
     text-align: center;
     width: auto;
     height: auto;
     flex-grow: 1;
+  }
+  .row {
+      flex-grow: 1;
   }
 
 }
@@ -83,34 +87,33 @@
     top: 0px;
     width: 100%;
     z-index: 99;
+    flex-basis: auto;
+    min-width: 300px;
+
 
 }
 
 #menu1 {
+    max-height: 10rem;
     background-color:  rgb(255, 255, 255);
     justify-content: center;
-    padding: 0px 0px 0px 0px;
+    padding: 8px 8px 8px 8px;
     border: 1px solid;
 }
 
 
 #logo{
-    background: url('img/Background/BD6530.jpg') no-repeat center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-    // margin-bottom: 1rem;
+    // background: url('img/Background/BD6530.jpg') no-repeat center fixed;
+    // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    // background-size: cover; /* version standardisée */
+    // // margin-bottom: 1rem;
     padding: 3rem;
 //   background-color: rgb(20, 116, 180)
 
 }
 
 body{
-    width: 100%;
-//     height: 100vh;
-//   background: #84e8dc;
-//   background: -moz-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
-//   background: -webkit-linear-gradient(-45deg, #84e8dc 0%,#f4ed8b 100%);
-//   background: linear-gradient(135deg, #84e8dc 0%,#f4ed8b 100%);
+  width: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -118,15 +121,6 @@ body{
   background: #141E30 no-repeat fixed;
   background: -webkit-linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
   background: linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
-
-// color: #fff;
-// background: -webkit-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-// background: -o-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-// background: -moz-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-// background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-// background-size: cover;
-// background-position: 50% 21%;
-// text-align: right;
 
 }
 
@@ -196,7 +190,7 @@ body{
   h1.font-weight-bold{
     // min-width: 280px;
     min-height: 280px;
-    font-size: 5rem;
+    font-size: 7rem;
     // animation-name: flip;
     // animation-duration: 3s;
     // animation-iteration-count: 1;
@@ -305,7 +299,7 @@ body{
   }
 
 .logo1{
-    animation-name:flip;
+    animation-name: jackInTheBox;
     animation-duration: 3s;
     transition: all 0.8s;
 
@@ -313,103 +307,6 @@ body{
 .logo1 :hover {
       transform: scale(1.2);
 
-  }
-
-  @-webkit-keyframes flip {
-    from {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, -360deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-
-    40% {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -190deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -190deg);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-
-    50% {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -170deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -170deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-
-    80% {
-      -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-
-    to {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-  }
-
-  @keyframes flip {
-    from {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, -360deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-
-    40% {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -190deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -190deg);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-
-    50% {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -170deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-        rotate3d(0, 1, 0, -170deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-
-    80% {
-      -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-
-    to {
-      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
-        rotate3d(0, 1, 0, 0deg);
-      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-  }
-
-  .animated.flip {
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-    -webkit-animation-name: flip;
-    animation-name: flip;
   }
 
 .btn-facebook {

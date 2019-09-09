@@ -27,6 +27,11 @@
                             <p class="help is-danger">{{ $message }}</p>
                         @enderror
                     </div>
+                    <div class="custom-file">
+                        
+                        <input type="file" name="photo"class="custom-file-input" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choisir le fichier :</label>
+                    </div>
                     <div class="field">
                         <label class="label">Description</label>
                         <div class="control">

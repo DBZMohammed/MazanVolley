@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     {{-- Formulaire --}}
-                    <form action="{{ route('posts.store') }}" method="POST">
+                    <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -29,31 +29,25 @@
                                 <div>
                                     <label for="title">Titre de l'article : </label>
                                 </div>
-                                <div class="font-size-500">
+                                <div class="font-size-500 text-dark ">
                                         <input value="{{ old('title') }}" type="text" name="title">
                                 </div>
                             </div>
-
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="draft">
-                                Cocher si c'est un brouillon
-                              </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="active">
-                                Cocher si visible sur le site
-                              </div>
+                            {{-- <div class="custom-file">
+                                    <input type="file" name="photo"class="custom-file-input" aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choisir le fichier :</label>
+                            </div> --}}
                               <br>
-                              <label class="label">Selectionner un Format : </label>
-                              <select name="theme">
-                                  <option value="Symphony">Symphony</option>
-                                  <option value="Laravel">Laravel</option>
-                                  <option value="Wordpress">Wordpress</option>
-                                </select>
-
+                              <div class="custom-file justify-content-center">
+                                    <div class="btn btn-primary btn-sm float-left">
+                                      <span>Choisir le fichier :</span>
+                                      <input name="photo" type="file" multiple>
+                                    </div>
+                                </div>
+                                  <br>
                               <br>
-                              <br>
-                              <label class="label">Selectionner une categorie : </label>
-                              <select name="category_id">
+                              <label class="label ">Selectionner une categorie : </label>
+                              <select name="category_id" class="text-dark">
 
                                     @foreach($categories as $category)
                                     <option value="{{ $category->id }}">
@@ -69,7 +63,7 @@
                                     <label for="contenu">Contenu de l'article : </label>
                                 </div>
                                 <div>
-                                    <textarea name="content" id="content" style="width:100%" rows="5">{{ old('content') }}</textarea>
+                                    <textarea class="text-dark" name="content" id="content" style="width:100%" rows="5">{{ old('content') }}</textarea>
                                 </div>
                             </div>
                             <div class="col-mb-12 mb-3">
