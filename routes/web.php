@@ -1,7 +1,8 @@
 <?php
 
+use App\Mail\ContactMail;
 
-Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')->group(function(){
+Route::prefix('backoffice')->middleware('auth', 'checkAdmin')->namespace('Admin')->group(function () {
 
     // Route::get('posts/create', 'PostController@create')->name('posts.create');
     // Route::post('posts/store', 'PostController@store')->name('posts.store');
@@ -14,14 +15,12 @@ Route::prefix('backoffice')->middleware('auth','checkAdmin')->namespace('Admin')
     Route::get('/licences', 'PostController@licences')->name('licences');
     Route::resource('posts', 'PostController');
     Route::resource('pages', 'PageController');
-
-
 });
 
 Route::resource('comments', 'CommentController');
 
 // à propos non utilisé .
-Route::get('/', function (){
+Route::get('/', function () {
     // echo('A propos');
     return view('a-propos');
 })->name('accueil');
@@ -40,20 +39,21 @@ Route::get('category/{title}', 'PostController@category')->name('category');
 // page des articles
 Route::get('articles', 'PostController@articles')->name('articles');
 
-//page des infos pratiques
-Route::get('infos', 'PostController@infos')->name('infos');
 
 //page des photos et vidéos
 Route::get('uploads', 'PostController@uploads')->name('uploads');
 
 
+//page du formulaire de contact
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
+Route::post('/contact', function (Request $request) {
+    Mail::send(new ContactMail($request));
+    return redirect('/');
+});
 
 
 
 Auth::routes();
-
-
-
-
-?>
