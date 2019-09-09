@@ -52,13 +52,8 @@
                                                     href="{{ route('articles') }}">{{ __('La vie du club') }}</a>
                                             </li>
                                             <li class="link nav-item m-auto p-2">
-<<<<<<< HEAD
-                                                <a class="link nav-link btn btn-light text-dark"
-                                                    href="{{ route('infos') }}">{{ __('Infos pratiques') }}</a>
-=======
                                                 <a class="link nav-link btn btn-light text-dark m-auto"
                                                     href="{{ route('contact') }}">{{ __('Contact et plan') }}</a>
->>>>>>> bb001db25d52f3ad80dd2990f16624675a5dcf0b
                                             </li>
 
                                             <li class="link nav-item m-auto p-2">
