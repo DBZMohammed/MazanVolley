@@ -31,17 +31,17 @@
                                     <label class="text-dark" for="title">Titre de l'article : </label>
                                 </div>
                                 <div class="font-size-500">
-                                    <input class="form-control" value="@if(old('title')) {{ old('title') }} @else {{ $post->title }} @endif"
+                                    <input class="form-control" value="@if(old('title')) {{ old('title') }} @else {{ $page->title }} @endif"
                                         type="text" name="title">
                                 </div>
                             </div>
                             <br>
                             <div class="custom-control custom-checkbox">
-                                    <input @if(old('draft')||($post->draft)) checked="checked" @endif type="checkbox" name="draft">
+                                    <input @if(old('draft')||($page->draft)) checked="checked" @endif type="checkbox" name="draft">
                                     Ceci est un brouillon !
                                   </div>
                                 <div class="custom-control custom-checkbox">Actif :
-                                    <input @if(old('active')||($post->active)) checked="checked" @endif type="checkbox" name="active">
+                                    <input @if(old('active')||($page->active)) checked="checked" @endif type="checkbox" name="active">
                                     Cocher si visible sur le site
                                   </div>
                                   <br>
@@ -54,7 +54,7 @@
 
                                   <br>
                                   <br>
-                                  <label class="label">Selectionner une categorie : </label>
+                                  {{-- <label class="label">Selectionner une categorie : </label>
                                   <select class="text-dark" name="category_id">
 
                                         @foreach($categories as $category)
@@ -62,7 +62,7 @@
                                             {{ $category->title }}
                                         </option>
                                         @endforeach
-                                    </select>
+                                    </select> --}}
                                     <br>
 
 
@@ -72,7 +72,7 @@
                                     <label for="contenu">Contenu de l'article : </label>
                                 </div>
                                 <div>
-                                    <textarea class="text-dark" name="content" id="content" style="width:100%" rows="5"> @if(old('content')) {{ old('content') }} @else {{ $post->content }} @endif </textarea>
+                                    <textarea class="text-dark" name="content" id="content" style="width:100%" rows="5"> @if(old('content')) {{ old('content') }} @else {{ $page->content }} @endif </textarea>
                                 </div>
                             </div>
                             <div class="col-mb-12 mb-3">

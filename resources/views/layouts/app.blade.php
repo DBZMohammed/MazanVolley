@@ -20,25 +20,17 @@
 <body>
 
     <div id="logo" class="container-fluid">
-        <div class="row justify-content-between align-items-center">
-            {{-- <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a> --}}
+        <div class="row justify-content-between align-content-center">
+            <div class="col-12-xl">
+                <a  class="navbar navbar-brand" href="{{ url('/') }}">
+                    <h1 id="title1" class="link font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
+                </a>
 
-            <a  class="navbar navbar-brand" href="{{ url('/') }}">
-                <h1 id="title1" class="link font-weight-bold text-white "> {{ config('app.name', 'Laravel') }} </h1>
-            </a>
-
-            <div class="link">
-
-                <span>
-                     <a href="https://fr-fr.facebook.com/pages/category/Sports-Club/Mazan-Volley-ball-1883689478318448/" class="link btn btn-facebook"><i class="fab fa-facebook-f"></i></a>
-                </span>
-
-
-
+                <a class="logo1" href="{{ route('accueil') }}"><img width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
+            </div>
         </div>
-        </div>
+    </div>
 
-        </div>
     <header id="menu2">
                 <div id="app">
                     <div class="container-fluid">
@@ -67,11 +59,6 @@
                                                 <a class="link nav-link btn btn-light text-dark m-auto"
                                                     href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
                                             </li>
-
-                                            <li class="logo1 nav-link p-3">
-                                                    <a class="logo1" href="{{ route('accueil') }}"><img class="link" width=150 height=150 src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
-                                            </li>
-
                                             @guest
                                             <li class="link nav-item m-auto p-2">
                                                 <a class="link nav-link btn btn-light text-dark"

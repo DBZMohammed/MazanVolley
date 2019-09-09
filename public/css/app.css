@@ -8343,11 +8343,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  color: #fff;
-  background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url(/images/background-body2.jpg?162e8818c9f5363c41dd04d5aec799c9);
-  background-size: cover;
-  background-position: 50% 21%;
-  text-align: right;
+  height: 100vh;
+  background: #141E30 no-repeat fixed;
+  background: linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
 }
 
 .footer {

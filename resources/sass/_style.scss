@@ -114,19 +114,19 @@ body{
   margin: 0;
   padding: 0;
   width: 100%;
-//   height: 100vh;
-//   background: #141E30 no-repeat fixed;
-//   background: -webkit-linear-gradient(to top, #243B55, #141E30);
-//   background: linear-gradient(to top, #243B55, #141E30);
+  height: 100vh;
+  background: #141E30 no-repeat fixed;
+  background: -webkit-linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
+  background: linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
 
-color: #fff;
-background: -webkit-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-background: -o-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-background: -moz-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
-background-size: cover;
-background-position: 50% 21%;
-text-align: right;
+// color: #fff;
+// background: -webkit-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+// background: -o-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+// background: -moz-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+// background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('img/Background/background-body2.jpg');
+// background-size: cover;
+// background-position: 50% 21%;
+// text-align: right;
 
 }
 
