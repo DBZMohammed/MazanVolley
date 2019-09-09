@@ -52,7 +52,7 @@
                                             </li>
                                             <li class="link nav-item m-auto p-2">
                                                 <a class="link nav-link btn btn-light text-dark m-auto"
-                                                    href="{{ route('infos') }}">{{ __('Infos pratiques') }}</a>
+                                                    href="{{ route('contact') }}">{{ __('Contact et plan') }}</a>
                                             </li>
 
                                             <li class="link nav-item m-auto p-2">
