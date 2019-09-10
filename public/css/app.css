@@ -8302,12 +8302,10 @@ button.close {
   .title1 {
     width: auto;
     height: auto;
-    flex-grow: 1;
-    justify-content: center;
   }
 
   #logo1 {
-    font-size: 8px;
+    font-size: 20px;
   }
 
   .img-rounded {

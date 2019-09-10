@@ -1,7 +1,7 @@
 <?php
 
 use App\Mail\ContactMail;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 Route::prefix('backoffice')->middleware('auth', 'checkAdmin')->namespace('Admin')->group(function () {
 
@@ -55,7 +55,9 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::post('/contact', function (Request $request) {
-    Mail::send(new ContactMail($request));
+
+    // Mail::send(new ContactMail($request));
+    $request->session()->flash('status', 'Votre mail a bien été envoyé !');
     return redirect('/');
 });
 

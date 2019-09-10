@@ -19,13 +19,13 @@
 
 <body>
 
-    <div id="logo" class="container-fluid bg-white">
-        <div class="row d-flex flex-wrap justify-content-between align-content-center">
-            <div class="logo1 col-6 m-auto">
+    <div class="container-fluid bg-white">
+        <div class="row justify-content-between align-content-center">
+            <div class="logo1 col-6-md m-auto">
                 <a class="logo1 p-2" href="{{ route('accueil') }}"><img width=150 height=150
                         src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
             </div>
-            <div id="logo1" class="col-6 m-auto flex-column">
+            <div class="col-6-md m-auto">
                 <a class="logo1 navbar navbar-brand" href="{{ url('/') }}">
                     <h1 id="title1" class="logo1 font-weight-bold text-white"> {{ config('app.name', 'Laravel') }} </h1>
                 </a>
@@ -94,7 +94,8 @@
 
                                         <a class="dropdown-item font-weight-bold" href="{{ route('posts.index') }}"> Articles </a>
 
-                                        <a class="dropdown-item font-weight-bold" href="{{ route('pages.index') }}"> Pages </a>
+                                         {{-- Pas utilisé --}}
+                                        {{-- <a class="dropdown-item font-weight-bold" href="{{ route('pages.index') }}"> Pages </a> --}}
 
                                         <a class="dropdown-item font-weight-bold" href="{{ route('licences') }}"> Licences </a>
 

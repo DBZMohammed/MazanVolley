@@ -8,7 +8,7 @@
         </div>
 
 
-        <div class="col-6">
+        <div class="col-6 flex-wrap">
             <div>
                 <h3 class="font-weight-bold text-white ">Appelez-nous !</h3>
                 <br>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-6 flex-wrap">
             <h3 class="font-weight-bold p-3 mb-3 text-white">Envoyez-nous un petit mot !</h3>
             <br>
             <form action="{{ url('/contact') }}" method="POST">
