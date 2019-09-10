@@ -1,6 +1,7 @@
 <?php
 
 use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Request;
 
 Route::prefix('backoffice')->middleware('auth', 'checkAdmin')->namespace('Admin')->group(function () {
 
@@ -13,6 +14,7 @@ Route::prefix('backoffice')->middleware('auth', 'checkAdmin')->namespace('Admin'
 
     Route::get('/uploadsA', 'PostController@uploadsA')->name('uploadsA');
     Route::get('/licences', 'PostController@licences')->name('licences');
+
     Route::resource('posts', 'PostController');
     Route::resource('pages', 'PageController');
 });
@@ -38,6 +40,9 @@ Route::get('category/{title}', 'PostController@category')->name('category');
 
 // page des articles
 Route::get('articles', 'PostController@articles')->name('articles');
+
+//fonction de recherche
+Route::post('/search', 'PostController@search')->name('search');
 
 
 //page des photos et vidéos

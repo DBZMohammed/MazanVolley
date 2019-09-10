@@ -25,7 +25,7 @@
                 <a class="logo1 p-2" href="{{ route('accueil') }}"><img width=150 height=150
                         src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
             </div>
-            <div id="logo1" class="col-6 m-auto">
+            <div id="logo1" class="col-6 m-auto flex-column">
                 <a class="logo1 navbar navbar-brand" href="{{ url('/') }}">
                     <h1 id="title1" class="logo1 font-weight-bold text-white"> {{ config('app.name', 'Laravel') }} </h1>
                 </a>
@@ -115,7 +115,8 @@
                                     </div>
                                 </li>
                                 @endguest
-                                <form class="form-inline m-auto">
+                                        <form action="{{ route('search') }}" method="POST" class="form-inline m-auto">
+                                                @csrf
                                     <input class="form-control font-weight-bold btn btn-light text-dark m-auto"
                                         type="search" name="search" placeholder="Rechercher" aria-label="Rechercher">
                                     <button class="link btn btn-light font-weight-bold text-dark m-auto"

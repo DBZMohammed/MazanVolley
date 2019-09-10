@@ -19,6 +19,20 @@ class PostController extends Controller
 
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $categories = Category::all();
+        $posts = Post::where('content', 'like', '%'.$search.'%')->paginate(5);
+
+        return view('articles', [
+            'posts' => $posts,
+            'categories' => $categories
+        ]);
+
+    }
+
+
 
 
     public function category($title)
