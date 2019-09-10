@@ -37,12 +37,13 @@
                             </div>
                             <br>
                             <br>
-                            <div class="custom-file">
-                                    <div class="btn btn-primary btn-sm float-left">
+                            <div class="custom-file justify-content-center">
+                                    <div class="btn btn-primary btn-sm">
                                       <span>Choisir le fichier :</span>
                                       <input name="photo" type="file" multiple>
                                     </div>
                                 </div>
+                                  <br>
                                   <br>
                                   <br>
                                   <label class="label">Selectionner une categorie : </label>
