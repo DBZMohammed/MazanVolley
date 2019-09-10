@@ -8291,14 +8291,9 @@ button.close {
 
   #title1 {
     font-size: 24px;
-    justify-content: center;
     text-align: center;
     width: auto;
     height: auto;
-    flex-grow: 1;
-  }
-
-  .row {
     flex-grow: 1;
   }
 }
@@ -8332,8 +8327,8 @@ button.close {
 }
 
 #menu1 {
-  max-height: 10rem;
   background-color: white;
+  height: 100%;
   justify-content: center;
   padding: 8px 8px 8px 8px;
   border: 1px solid;
@@ -8368,12 +8363,8 @@ main {
 }
 
 .link {
+  background-color: #3DA98B;
   transition: all 0.8s;
-}
-
-.link :hover {
-  transform: scale(1.2);
-  border: 3px inset black;
 }
 
 .card-body {
@@ -8555,5 +8546,9 @@ div.pageForm {
 
 .contact {
   font-size: 18px;
+}
+
+#licence {
+  background-color: #3DA98B;
 }
 

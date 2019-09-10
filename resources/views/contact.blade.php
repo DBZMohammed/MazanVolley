@@ -53,7 +53,7 @@
                     <textarea name="content" class="form-control" cols="10" rows="10"></textarea>
                 </div>
 
-                <button class="font-weight-bold" type="submit">Envoyer</button>
+                <button class="btn btn-primary btn-lg font-weight-bold" type="submit">Envoyer</button>
 
             </form>
 

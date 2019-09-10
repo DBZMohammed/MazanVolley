@@ -29,6 +29,10 @@
                     </div>
                     <div class="col-8 d-flex flex-wrap align-content-center">
                         {{ $post->content }}
+                        <br>
+                        <hr>
+                        <a href="{{ route('article',['id' => $post->id]) }}"><button type="button" class="btn btn-success">En savoir plus</button></a>
+
                     </div>
                 </div>
             </div>

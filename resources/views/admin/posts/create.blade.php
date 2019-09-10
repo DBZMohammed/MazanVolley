@@ -33,10 +33,6 @@
                                         <input value="{{ old('title') }}" type="text" name="title">
                                 </div>
                             </div>
-                            {{-- <div class="custom-file">
-                                    <input type="file" name="photo"class="custom-file-input" aria-describedby="inputGroupFileAddon01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choisir le fichier :</label>
-                            </div> --}}
                               <br>
                               <div class="custom-file justify-content-center">
                                     <div class="btn btn-primary btn-sm float-left">
