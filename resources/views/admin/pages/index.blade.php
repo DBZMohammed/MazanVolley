@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid p-5 m-auto">
-        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
+<div class="container-fluid p-5 m-auto">
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+    </div>
     @endif
     <div class="row justify-content-center">
         <div class="col-md-12 text-center">
@@ -13,7 +13,7 @@
             <table class="table table-hover table-bordered text-center bg-white">
 
                 <hr>
-                    {{ $pages->links() }}
+                {{ $pages->links() }}
                 <hr>
 
                 <thead class="thead-dark">
@@ -33,7 +33,8 @@
                     <td class="align-middle">{{ $page->updated_at->format('d/m/Y H:i:s') }}</td>
 
                     <td class="align-middle">
-                        <a class="btn btn-success btn-block p-2" href="{{ route('pages.edit', ['id'=>$page->id]) }}">Modifier</a>
+                        <a class="btn btn-success btn-block p-2"
+                            href="{{ route('pages.edit', ['id'=>$page->id]) }}">Modifier</a>
 
                         <form action="{{ route('pages.destroy', ['id'=>$page->id]) }}" method="POST">
                             @method('DELETE')

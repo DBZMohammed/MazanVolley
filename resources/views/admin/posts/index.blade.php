@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid p-5 m-auto">
-        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
+<div class="container-fluid p-5 m-auto">
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+    </div>
     @endif
     <div class="row justify-content-center">
         <div class="col-md-12 text-center">
@@ -13,7 +13,7 @@
             <table class="table table-hover table-bordered text-center bg-white">
 
                 <hr>
-                    {{ $posts->links() }}
+                {{ $posts->links() }}
                 <hr>
 
                 <thead class="thead-dark">
@@ -32,14 +32,15 @@
                     <td class="align-middle">
 
                         @if($post->category)
-                            {{ $post->category->title }}
+                        {{ $post->category->title }}
                         @endif
                     </td>
                     <td class="align-middle">{{ $post->created_at->diffForHumans() }}</td>
                     <td class="align-middle">{{ $post->updated_at->format('d/m/Y H:i:s') }}</td>
 
                     <td>
-                        <a class="btn btn-success btn-block p-2" href="{{ route('posts.edit', ['id'=>$post->id]) }}">Modifier</a>
+                        <a class="btn btn-success btn-block p-2"
+                            href="{{ route('posts.edit', ['id'=>$post->id]) }}">Modifier</a>
 
                         <form action="{{ route('posts.destroy', ['id'=>$post->id]) }}" method="POST">
                             @method('DELETE')

@@ -1,12 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700,900);
 
-// * {
-//     background-color: rgba(0, 0, 0, 0.2);
-// }
+// Style personnalisé
+
+
+// Media queries
 
 @media all and (max-device-width: 860px) {
 
-    /* Vos règles CSS pour les mobiles ici */
+    /* Vos règles CSS pour les tablettes ici */
     body {
         width: 100%;
     }
@@ -64,13 +65,23 @@
         flex-grow: 1;
     }
 
+    .map1 {
+        width: 600px;
+        height: 450px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        // width="600" height="450" 
+    }
+
 }
 
 @media all and (max-device-width: 480px) {
+
+    // regles pour mobiles ici 
+
     .title1 {
         width: auto;
         height: auto;
-
     }
 
     #logo1 {
@@ -83,7 +94,17 @@
         width: 320px;
     }
 
+    .map1 {
+        width: 250px;
+        height: 250px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
 }
+
+// fin des media queries.
+
 
 #menu2 {
     position: -webkit-sticky;
@@ -94,7 +115,6 @@
     flex-basis: auto;
     min-width: 300px;
 
-
 }
 
 #menu1 {
@@ -102,36 +122,28 @@
     height: 100%;
     justify-content: center;
     padding: 8px 8px 8px 8px;
-    border: 1px solid;
 }
 
-
-#logo{
-    // background: url('img/Background/BD6530.jpg') no-repeat center fixed;
-    // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    // background-size: cover; /* version standardisée */
-    // // margin-bottom: 1rem;
+#logo {
+  
     padding: 3rem;
-    //   background-color: rgb(20, 116, 180)
+ 
 
 }
 
-body{
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background: #141E30 no-repeat fixed;
-  background: -webkit-linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
-  background: linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #E00A11 no-repeat fixed;
+    background: -webkit-linear-gradient(to top, #243B55, #E00A11) no-repeat fixed;
+    background: linear-gradient(to top, #E00A11, #141E30) no-repeat fixed;
 
 }
 
-  .footer{
-    //   position: relative;
-    // background: url('img/Background/background-body2.jpg') no-repeat fixed;
-    // position: fixed;
+.footer {
+ 
     bottom: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -139,39 +151,22 @@ body{
 }
 
 main {
-    // background: url('img/Background/background-body2.jpg') no-repeat center fixed;
+    // background: url('img/Background/background-body2.jpg') no-repeat center fixed; pas utilisé !
     -webkit-background-size: cover;
     /* pour anciens Chrome et Safari */
     background-size: cover;
     /* version standardisée */
-    //   max-width: 1280px;
+
     min-height: 100%;
     margin: 0 auto;
-    //   position: relative;
+
 
 }
-
-//   a{
-//     font-family: 'Poppins', sans-serif;
-//     font-size: 18px;
-//   }
 
 .link {
-    // padding: 1rem;
     background-color: #3DA98B;
     transition: all 0.8s;
-    // flex-basis: auto;
-
-    // border: 1px inset black
 }
-
-// .link :hover {
-//     // background: rgb(235, 198, 198);
-//     // font-size: 14px;
-//     // padding: 1.5rem;
-//     transform: scale(1.2);
-//     border: 3px inset rgb(218, 48, 48)
-// }
 
 .card-body {
     font-family: 'Poppins', sans-serif;
@@ -187,26 +182,19 @@ main {
     max-width: 100%;
     height: auto;
     display: block;
-    // box-shadow: 10px 10px 5px grey;
 }
 
 // animations
 
 h1.font-weight-bold {
-    // min-width: 280px;
     min-height: 280px;
     font-size: 7rem;
-    // animation-name: flip;
-    // animation-duration: 3s;
-    // animation-iteration-count: 1;
-    // animation-direction: alternate;
     font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: -10px 0 17px 0;
     color: #ffffff !important;
     text-shadow: 0 13.36px 8.896px #000000, 0 -2px 25px #BE0502;
-    /* #c4b59d */
     letter-spacing: -4px;
 }
 
@@ -318,7 +306,8 @@ div.pageForm {
     animation-timing-function: ease-out;
 }
 
-.logo1{
+
+.logo1 {
     animation-name: jackInTheBox;
     animation-duration: 3s;
     transition: all 0.8s;
@@ -330,10 +319,13 @@ div.pageForm {
 
 }
 
+
 .btn-facebook {
     background-color: #405D9D;
     color: #fff;
 }
+
+
 
 .responsive {
     width: 100%;
@@ -352,6 +344,6 @@ div.pageForm {
     font-size: 18px;
 }
 
-#licence{
+#licence {
     background-color: #3DA98B;
 }

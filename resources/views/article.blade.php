@@ -8,10 +8,11 @@
             <div class="card">
                 <div class="card-header">{{ $post->title }}</div>
                 <div class="card-body">
-                    <a href="{{ asset('storage/'.$post->photo) }}"><img src="{{ asset('storage/'.$post->photo) }}"  class="responsive img-thumbnail" alt="Image"></a>
+                    <a href="{{ asset('storage/'.$post->photo) }}"><img src="{{ asset('storage/'.$post->photo) }}"
+                            class="responsive img-thumbnail" alt="Image"></a>
 
-                        {{ $post->content }}
-                    </div>
+                    {{ $post->content }}
+                </div>
             </div>
         </div>
     </div>
@@ -23,54 +24,55 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
-                        @foreach($post->comments as $comment)
+                    @foreach($post->comments as $comment)
 
-                        <b>
-                            {{ $comment->user->name }}
-                        </b>
-                        <small>{{$comment->created_at->diffForHumans()}}</small>
-                        <br>
-                        <p>
-                            {{ $comment->content }}
-                        </p>
-                        <br>
-                        <hr>
-                        @endforeach
+                    <b>
+                        {{ $comment->user->name }}
+                    </b>
+                    <small>{{$comment->created_at->diffForHumans()}}</small>
+                    <br>
+                    <p>
+                        {{ $comment->content }}
+                    </p>
+                    <br>
+                    <hr>
+                    @endforeach
 
                     @guest
                     Vous devez être connecté !
-                   @else
+                    @else
                     <form action="{{ route('comments.store') }}" method="POST">
 
-                            @csrf
-                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                        @csrf
+                        <input type="hidden" name="post_id" value="{{ $post->id }}">
 
-                            <div class="col-mb-12 mb-3 font-weight-bold">
-                                <div>
-                                    <label for="contenu">Votre commentaire : </label>
-                                </div>
-                                <div>
-                                    <textarea name="content" id="content" style="width:100%" rows="5">{{ old('content') }}</textarea>
-                                </div>
+                        <div class="col-mb-12 mb-3 font-weight-bold">
+                            <div>
+                                <label for="contenu">Votre commentaire : </label>
                             </div>
-                            <div class="col-mb-12 mb-3">
+                            <div>
+                                <textarea name="content" id="content" style="width:100%"
+                                    rows="5">{{ old('content') }}</textarea>
+                            </div>
+                        </div>
+                        <div class="col-mb-12 mb-3">
 
                             <button type="submit" class="btn btn-success btn-lg">Ajouter votre commentaire</button>
-                            </div>
+                        </div>
 
-                            {{--
+                        {{--
                             $table->boolean('draft')->default(0);
                             $table->boolean('active')->default(0);
                             $table->enum('theme',['Symphony','Laravel','Wordpress']); --}}
 
 
-                        </form>
-                        @endguest
+                    </form>
+                    @endguest
 
                 </div>
             </div>

@@ -8242,7 +8242,7 @@ button.close {
 }
 
 @media all and (max-device-width: 860px) {
-  /* Vos règles CSS pour les mobiles ici */
+  /* Vos règles CSS pour les tablettes ici */
 
   body {
     width: 100%;
@@ -8296,6 +8296,13 @@ button.close {
     height: auto;
     flex-grow: 1;
   }
+
+  .map1 {
+    width: 600px;
+    height: 450px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 @media all and (max-device-width: 480px) {
@@ -8311,6 +8318,13 @@ button.close {
   .img-rounded {
     height: 200px;
     width: 320px;
+  }
+
+  .map1 {
+    width: 250px;
+    height: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
@@ -8329,7 +8343,6 @@ button.close {
   height: 100%;
   justify-content: center;
   padding: 8px 8px 8px 8px;
-  border: 1px solid;
 }
 
 #logo {
@@ -8340,10 +8353,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 100vh;
-  background: #141E30 no-repeat fixed;
-  background: linear-gradient(to top, #243B55, #141E30) no-repeat fixed;
+  background: #E00A11 no-repeat fixed;
+  background: linear-gradient(to top, #E00A11, #141E30) no-repeat fixed;
 }
 
 .footer {
@@ -8389,7 +8401,6 @@ h1.font-weight-bold {
   margin: -10px 0 17px 0;
   color: #ffffff !important;
   text-shadow: 0 13.36px 8.896px #000000, 0 -2px 25px #BE0502;
-  /* #c4b59d */
   letter-spacing: -4px;
 }
 

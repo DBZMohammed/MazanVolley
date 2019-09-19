@@ -18,11 +18,11 @@
 </head>
 
 <body>
-
+    {{-- logo et titre du site --}}
     <div class="container-fluid bg-white">
-        <div class="row justify-content-between align-content-center">
-            <div class="logo1 col-6-md m-auto">
-                <a class="logo1 p-2" href="{{ route('accueil') }}"><img width=150 height=150
+        <div class="logo1 row justify-content-between align-content-center">
+            <div class="col-6-md m-auto p-2">
+                <a class="logo1 p-3" href="{{ route('accueil') }}"><img class="logo1" width=150 height=150
                         src="{{ asset('img/logo/logo3.png') }}" alt="background image"></a>
             </div>
             <div class="col-6-md m-auto">
@@ -33,10 +33,12 @@
         </div>
     </div>
 
+
+    {{-- header du site --}}
     <header id="menu2">
         <div id="app">
             <div class="container-fluid">
-                <div id="menu1" class="row d-flex justify-content-center p-2">
+                <div id="menu1" class="row d-flex justify-content-center p-2  ">
 
                     <nav class="navbar navbar-expand-lg navbar-light">
                         {{-- <a class="navbar-brand text-hide" href="{{ url('/') }}">
@@ -65,8 +67,8 @@
                                 </li> --}}
                                 @guest
                                 <li class="nav-item m-auto p-2">
-                                    <a class="link nav-link btn btn-light font-weight-bold text-dark" href="{{ route('login') }}"><i
-                                            id="nav-menu-cadenas"
+                                    <a class="link nav-link btn btn-light font-weight-bold text-dark"
+                                        href="{{ route('login') }}"><i id="nav-menu-cadenas"
                                             class="fas fa-user-lock"></i>{{ __('Administrateur') }}</a>
                                 </li>
 
@@ -92,14 +94,18 @@
                                     <div class="dropdown-menu dropdown-menu-right text-dark"
                                         aria-labelledby="navbarDropdown">
 
-                                        <a class="dropdown-item font-weight-bold" href="{{ route('posts.index') }}"> Articles </a>
+                                        <a class="dropdown-item font-weight-bold" href="{{ route('posts.index') }}">
+                                            Articles </a>
 
-                                         {{-- Pas utilisé --}}
-                                        {{-- <a class="dropdown-item font-weight-bold" href="{{ route('pages.index') }}"> Pages </a> --}}
+                                        {{-- Pas utilisé --}}
+                                        {{-- <a class="dropdown-item font-weight-bold" href="{{ route('pages.index') }}">
+                                        Pages </a> --}}
 
-                                        <a class="dropdown-item font-weight-bold" href="{{ route('licences') }}"> Licences </a>
+                                        <a class="dropdown-item font-weight-bold" href="{{ route('licences') }}">
+                                            Licences </a>
 
-                                        <a class="dropdown-item font-weight-bold" href="{{ route('posts.create') }}"> Créer un article</a>
+                                        <a class="dropdown-item font-weight-bold" href="{{ route('posts.create') }}">
+                                            Créer un article</a>
 
 
 
@@ -116,8 +122,8 @@
                                     </div>
                                 </li>
                                 @endguest
-                                        <form action="{{ route('search') }}" method="POST" class="form-inline m-auto">
-                                                @csrf
+                                <form action="{{ route('search') }}" method="POST" class="form-inline m-auto">
+                                    @csrf
                                     <input class="form-control font-weight-bold btn btn-light text-dark m-auto"
                                         type="search" name="search" placeholder="Rechercher" aria-label="Rechercher">
                                     <button class="link btn btn-light font-weight-bold text-dark m-auto"
@@ -127,10 +133,18 @@
                         </div>
                     </nav>
     </header>
+
+    {{-- fin du header --}}
+
+
     <main class="container-fluid py-4">
         @yield('content')
     </main>
     </div>
+
+
+    {{-- footer --}}
+
     <footer class="footer p-4">
         <div class="container-fluid mx-auto text-center">
             <a href="http://www.ufolepvolley84.fr/"><img class="logoufolep" width=300 height=150
@@ -153,6 +167,8 @@
             </section>
         </div>
     </footer>
+
+    
     <!-- Scripts -->
     <script>
         window.onscroll = function () {

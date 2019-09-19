@@ -53878,25 +53878,17 @@ __webpack_require__.r(__webpack_exports__);
 function search() {
   console.log("n'a rien trouvé !!");
   return;
-} // When the user scrolls the page, execute myFunction
+} //navbar sticky
 
 
-window.onscroll = function () {
-  myFunction();
-}; // Get the navbar
-
-
-var navbar = document.getElementById("navbar"); // Get the offset position of the navbar
-
-var sticky = navbar.offsetTop; // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+var wrap = $("#wrap");
+wrap.on("scroll", function (e) {
+  if (this.scrollTop > 147) {
+    wrap.addClass("fix-search");
   } else {
-    navbar.classList.remove("sticky");
+    wrap.removeClass("fix-search");
   }
-}
+});
 
 /***/ }),
 

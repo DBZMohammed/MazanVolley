@@ -5,20 +5,15 @@ console.log("n'a rien trouvé !!")
     return
 }
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+//navbar sticky
+var wrap = $("#wrap");
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+    wrap.addClass("fix-search");
   } else {
-    navbar.classList.remove("sticky");
+    wrap.removeClass("fix-search");
   }
-}
+  
+});

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container p-5">
     <div id="licence" class="card text-dark p-4">
-        <form  action="{{ route('licences') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('licences') }}" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleInputNom">Nom :</label>
                 <input type="text" class="form-control" aria-describedby="aide email" placeholder="Nom" required>
@@ -31,8 +31,8 @@
             <br>
             <div class="custom-file justify-content-center">
                 <div class="btn btn-primary btn-sm float-left">
-                  <span>Choisir le fichier :</span>
-                  <input name="photo" type="file" multiple>
+                    <span>Choisir le fichier :</span>
+                    <input name="photo" type="file" multiple>
                 </div>
             </div>
             <br>
