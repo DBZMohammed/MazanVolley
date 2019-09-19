@@ -58,13 +58,12 @@
                                 </li>
                                 <li class="nav-item m-auto p-2">
                                     <a class="link nav-link btn btn-light font-weight-bold text-dark m-auto"
+                                        href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
+                                </li>
+                                <li class="nav-item m-auto p-2">
+                                    <a class="link nav-link btn btn-light font-weight-bold text-dark m-auto"
                                         href="{{ route('contact') }}">{{ __('Contact et plan') }}</a>
                                 </li>
-                                {{-- pas utilisé. --}}
-                                {{-- <li class="link nav-item m-auto p-2">
-                                                <a class="link nav-link btn btn-light text-dark"
-                                                    href="{{ route('uploads') }}">{{ __('Photos et vidéos') }}</a>
-                                </li> --}}
                                 @guest
                                 <li class="nav-item m-auto p-2">
                                     <a class="link nav-link btn btn-light font-weight-bold text-dark"
@@ -168,7 +167,7 @@
         </div>
     </footer>
 
-    
+
     <!-- Scripts -->
     <script>
         window.onscroll = function () {
